@@ -4,7 +4,7 @@ import useServices from '../../Hooks/useServices';
 import Service from '../Service/Service';
 
 const Services = () => {
-    const [services, setServices] = useServices();
+    const { services } = useServices();
 
     const newServices = services.slice(0, 6)
 

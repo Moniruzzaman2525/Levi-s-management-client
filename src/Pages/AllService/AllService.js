@@ -1,21 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useServices from '../../Hooks/useServices';
 
-const AllService = ({ service }) => {
+const AllService = ({ service, handleUserDelate }) => {
+    // const { handleUserDelate } = useServices()
     const { _id, name, img, price, description, suplier, quentity } = service;
-    const handleUserDelate = id => {
-        const proced = window.confirm("Are You Sure Want To Delate!!")
-        if (proced) {
-            const url = `http://localhost:5000/delete/${id}`
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log("delate");
-                })
-        }
-    }
+
     return (
         <div>
             <img className='' src={img} alt="" />
