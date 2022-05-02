@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useServices from '../../Hooks/useServices';
 import Service from '../Service/Service';
 
@@ -10,7 +11,8 @@ const Services = () => {
     return (
         <div>
             <h2>services{services.length}</h2>
-            <div className='grid grid-cols-3 container mx-auto'>
+            <Link to={'/services'}><button>Manage Inventory</button></Link>
+            <div className='grid grid-cols-3 '>
                 {
                     newServices.map(service => <Service
                         service={service}

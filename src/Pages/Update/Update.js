@@ -29,7 +29,8 @@ const Update = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setIsReload(!isReload)
+                setIsReload(!isReload);
+                e.target.reset();
                 // setUser(data)
                 // e.target.reset()
             });

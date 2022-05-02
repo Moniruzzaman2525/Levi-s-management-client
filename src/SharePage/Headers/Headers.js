@@ -6,10 +6,10 @@ const Headers = () => {
         <div>
             <ul>
                 <li>
-                    <Link to="services">Services</Link>
+                    <Link to="/services">Services</Link>
                 </li>
                 <li>
-                    <Link to="manage">manage</Link>
+                    <Link to="/manage">manage</Link>
                 </li>
             </ul>
         </div>
