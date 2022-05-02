@@ -14,7 +14,6 @@ const Update = () => {
         e.preventDefault();
 
         const quentity = e.target.quantity.value;
-        // console.log(quentity);
         const newQuentity = parseInt(quentity) + parseInt(user?.quentity)
         const updateQuentity = { newQuentity }
 
@@ -33,8 +32,27 @@ const Update = () => {
                 setIsReload(!isReload)
                 // setUser(data)
                 // e.target.reset()
+            });
+    };
+    const handleDeliveryProduct = (id) => {
+        // console.log('object');
+        const quantity = user?.quentity;
+        const updateQuantity = { quantity };
+        const url = `http://localhost:5000/deliver/${id}`
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setIsReload(!isReload)
             })
     }
+
     return (
         <div>
             <img src={user.img} alt="" />
@@ -43,7 +61,7 @@ const Update = () => {
             <p><small>{user.description}</small></p>
             <p>{user.suplier}</p>
             <p>quantity{user.quentity}</p>
-            <button>Delivered</button>
+            <button onClick={() => handleDeliveryProduct(user._id)}>Delivered</button>
             <form onSubmit={handleUpdateQuentity}>
                 <input type="text" name='quantity' />
                 <input className='cursor-pointer' type="submit" value="Add quantity" />
