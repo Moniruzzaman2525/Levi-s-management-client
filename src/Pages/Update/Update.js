@@ -57,6 +57,7 @@ const Update = () => {
     return (
         <div>
             <img src={user.img} alt="" />
+            <p>Id: {user._id}</p>
             <h1>{user.name}</h1>
             <p>{user.price}</p>
             <p><small>{user.description}</small></p>

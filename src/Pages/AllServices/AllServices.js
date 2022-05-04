@@ -1,25 +1,10 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import useServices from '../../Hooks/useServices';
 import AllService from '../AllService/AllService';
 
 const AllServices = () => {
     const { services, setServices } = useServices();
-    const handleUserDelate = id => {
-        const proced = window.confirm("Are You Sure Want To Delate!!")
-        if (proced) {
-
-            const url = `http://localhost:5000/deleted/${id}`
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => console.log(data))
-            const updateService = services.filter(service => service._id !== id);
-            setServices(updateService)
-            console.log(updateService);
-            console.log(services);
-        }
-    }
 
     return (
         <div>
@@ -29,7 +14,6 @@ const AllServices = () => {
                     services.map(service => <AllService
                         key={service._id}
                         service={service}
-                        handleUserDelate={handleUserDelate}
                     ></AllService>)
                 }
             </div>

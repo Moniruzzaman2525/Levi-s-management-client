@@ -8,8 +8,8 @@ const Headers = () => {
         <div>
             <nav className="bg-gray-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-16">
-                        <div className="flex items-center">
+                    <div className="flex md:flex-col md:jus justify-between">
+                        <div className="flex items-center h-16 justify-between">
                             <div className="flex-shrink-0">
                                 <img
                                     className="h-8 w-8"
@@ -23,7 +23,7 @@ const Headers = () => {
                                         href="#"
                                         className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        Dashboard
+                                        dee
                                     </a>
 
                                     <a
@@ -54,6 +54,11 @@ const Headers = () => {
                                         Reports
                                     </a>
                                 </div>
+                            </div>
+                            <div className='hidden md:block'>
+                                <a className="text-white" href="">hello</a>
+                                <a className="text-white" href="">hello</a>
+                                <a className="text-white" href="">hello</a>
                             </div>
                         </div>
                         <div className="-mr-2 flex md:hidden">
@@ -150,6 +155,7 @@ const Headers = () => {
                                     Reports
                                 </a>
                             </div>
+
                         </div>
                     )}
                 </Transition>

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import useServices from '../../Hooks/useServices';
 
-const AllService = ({ service, handleUserDelate }) => {
+const AllService = ({ service }) => {
     // const { handleUserDelate } = useServices()
     const { _id, name, img, price, description, suplier, quentity } = service;
 
@@ -14,7 +13,6 @@ const AllService = ({ service, handleUserDelate }) => {
             <p><small>{description}</small></p>
             <p>{suplier}</p>
             <p>{quentity}</p>
-            <button onClick={() => handleUserDelate(_id)}>Delate</button>
             <Link to={`/update/${_id}`}><button>Update</button></Link>
         </div>
     );
