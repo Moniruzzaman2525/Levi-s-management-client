@@ -55,11 +55,11 @@ const Headers = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className='hidden md:block'>
+                            {/* <div className='hidden md:block'>
                                 <a className="text-white" href="">hello</a>
                                 <a className="text-white" href="">hello</a>
                                 <a className="text-white" href="">hello</a>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="-mr-2 flex md:hidden">
                             <button

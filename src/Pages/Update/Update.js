@@ -39,7 +39,7 @@ const Update = () => {
         // console.log('object');
         const quantity = user?.quentity;
         const updateQuantity = { quantity };
-        const url = `http://localhost:5000/deliver/${id}`
+        const url = `http://localhost:5000/delivery/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
