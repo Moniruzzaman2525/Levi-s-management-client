@@ -60,7 +60,7 @@ const ManageItems = () => {
                                             {service.quentity}
                                         </td> */}
                                         <td class="px-6 py-4">
-                                            {service.suplier}
+                                            {service.quentity}
                                         </td>
                                         <td class="px-6 py-4">
                                             {service.price}

@@ -19,12 +19,12 @@ const Headers = () => {
                             </div>
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-4">
-                                    <a
-                                        href="#"
+                                    {/* <Link
+                                        to="/update"
                                         className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        dee
-                                    </a>
+                                        update
+                                    </Link> */}
 
                                     <a
                                         href="#"
@@ -47,12 +47,12 @@ const Headers = () => {
                                         Calendar
                                     </a>
 
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/signin"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        Reports
-                                    </a>
+                                        Signin
+                                    </Link>
                                 </div>
                             </div>
                             {/* <div className='hidden md:block'>
@@ -120,12 +120,12 @@ const Headers = () => {
                     {(ref) => (
                         <div className="md:hidden" id="mobile-menu">
                             <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                                <a
-                                    href="#"
+                                {/* <Link
+                                    to="update"
                                     className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
-                                    Dashboard
-                                </a>
+                                    update
+                                </Link> */}
 
                                 <a
                                     href="#"
@@ -148,12 +148,12 @@ const Headers = () => {
                                     Calendar
                                 </a>
 
-                                <a
-                                    href="#"
+                                <Link
+                                    to="/signin"
                                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
-                                    Reports
-                                </a>
+                                    SignIn
+                                </Link>
                             </div>
 
                         </div>
