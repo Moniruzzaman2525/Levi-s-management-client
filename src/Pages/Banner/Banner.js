@@ -23,31 +23,29 @@ const Banner = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img src="https://img.freepik.com/free-photo/redhaired-ginger-business-woman-working-textile-shopredhead-salewoman-storage-update-cotton-lace-fabric_175356-6585.jpg?w=900" alt="" />
+                    <img src="https://i.ibb.co/VH2qb0R/img1.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://img.freepik.com/free-photo/blue-denim-jeans-stack-wood-table-top-with-clothing-store-modern-shopping-mall-background_293060-12221.jpg?w=900" alt="" />
+                    <img src="https://i.ibb.co/GRD4xLG/img2.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://img.freepik.com/free-photo/denim-jeans-stack-wood-table-top-with-abstract-blur-clothing-store-shopping-mall-background_293060-11784.jpg?w=900" alt="" />
+                    <img src="https://i.ibb.co/ZfYx4B1/img3.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://img.freepik.com/free-photo/blue-denim-jeans-stack-wood-table-top-with-blur-clothing-store-modern-shopping-mall-background_293060-7533.jpg?w=900" alt="" />
+                    <img src="https://i.ibb.co/54GZYdL/img4.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://img.freepik.com/free-photo/selective-focus-skirts-hanged-clothes-rack_255755-1406.jpg?w=900" alt="" />
+                    <img src="https://i.ibb.co/8mqp3Vd/img5.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://img.freepik.com/free-photo/rolls-fabric-shelves_94120-327.jpg?w=900" alt="" />
-                </SwiperSlide>
-                <SwiperSlide><img src="https://img.freepik.com/free-photo/blue-jeans-shop_36923-497.jpg?w=900" alt="" /></SwiperSlide>
-                <SwiperSlide>
-                    <img src="https://img.freepik.com/free-photo/colorful-used-blouses-hangers-shopping-mall-toned_255755-1407.jpg?w=900" alt="" />
+                    <img src="https://i.ibb.co/BT71kTW/img6.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://img.freepik.com/free-photo/blue-denim-jeans-stack-wooden-table-top-clothing-store-modern-shopping-mall-folded-cotton-jeans-shop-window_77829-5559.jpg?w=900" alt="" />
+                    <img src="https://i.ibb.co/gtH5YwH/img7.jpg" alt="" />
                 </SwiperSlide>
-                <SwiperSlide><img src="https://img.freepik.com/free-photo/clothes-plastic-bags-hanging-hanger-laundry-closeup_151013-32483.jpg?w=900" alt="" /></SwiperSlide>
+                <SwiperSlide>
+                    <img src="https://i.ibb.co/TK7zPTK/img8.jpg" alt="" />
+                </SwiperSlide>
             </Swiper>
         </>
     );
