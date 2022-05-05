@@ -11,6 +11,7 @@ import Signup from './Pages/SigninPage/Signup/Signup';
 import RequireAuth from './Pages/SigninPage/RequireAuth/RequireAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MyItems from './Pages/ManageItmes/MyItems/MyItems';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/add' element={<AddItem></AddItem>}></Route>
         <Route path='/update/:id' element={<RequireAuth><Update></Update></RequireAuth>}></Route>
         <Route path='signin' element={<Signin></Signin>}></Route>
+        <Route path='myitems' element={<RequireAuth><MyItems></MyItems></RequireAuth>}></Route>
         <Route path='signup' element={<Signup></Signup>}></Route>
       </Routes>
       <ToastContainer></ToastContainer>

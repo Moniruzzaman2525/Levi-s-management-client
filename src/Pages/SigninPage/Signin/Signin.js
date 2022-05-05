@@ -1,10 +1,14 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import auth from '../../../frebase.init';
+import auth from '../../../firebase.init';
 
 const Signin = () => {
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/";
     const [userInfo, setUserInfo] = useState({
         email: "",
         password: "",
@@ -44,10 +48,14 @@ const Signin = () => {
         }
 
     }
-    const handleSignIn = event => {
+    const handleSignIn = async event => {
         event.preventDefault();
-        // console.log(email, password);
-        signInWithEmailAndPassword(userInfo.email, userInfo.password)
+        const email = userInfo.email;
+        await signInWithEmailAndPassword(userInfo.email, userInfo.password);
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        localStorage.setItem('accessToken', data.accessToken)
+        console.log(data);
+        navigate(from, { replace: true });
     }
     useEffect(() => {
         if (error) {
@@ -68,14 +76,8 @@ const Signin = () => {
         }
     }, [error]);
 
-    const navigate = useNavigate()
-    const location = useLocation()
-    const from = location.state?.from?.pathname || "/";
-    useEffect(() => {
-        if (user) {
-            navigate(from);
-        }
-    }, [user])
+
+
 
     return (
         <div className='w-2/4 mx-auto'>

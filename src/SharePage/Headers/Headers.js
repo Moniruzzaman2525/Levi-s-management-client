@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Transition } from "@headlessui/react";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Headers = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [user, loading, error] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+    };
     return (
         <div>
             <nav className="bg-gray-800">
@@ -26,7 +33,7 @@ const Headers = () => {
                                         update
                                     </Link> */}
 
-                                    <a
+                                    {/* <a
                                         href="#"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
@@ -45,14 +52,24 @@ const Headers = () => {
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Calendar
-                                    </a>
+                                    </a> */}
+                                    {
+                                        user ? <h4 className='text-white'>{user.displayName}</h4> : "USER"
+                                    }
+                                    {
+                                        user && <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">MyItems</button>
 
-                                    <Link
-                                        to="/signin"
-                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                    >
-                                        Signin
-                                    </Link>
+                                    }
+
+                                    {
+                                        user ? <button className='text-white' onClick={logout}>SignOut</button> :
+                                            <Link
+                                                to="/signin"
+                                                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                            >
+                                                Signin
+                                            </Link>
+                                    }
                                 </div>
                             </div>
                             {/* <div className='hidden md:block'>
@@ -127,7 +144,7 @@ const Headers = () => {
                                     update
                                 </Link> */}
 
-                                <a
+                                {/* <a
                                     href="#"
                                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
@@ -146,7 +163,7 @@ const Headers = () => {
                                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
                                     Calendar
-                                </a>
+                                </a> */}
 
                                 <Link
                                     to="/signin"
