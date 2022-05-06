@@ -133,3 +133,66 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.danimImg1 {
+  width: 70vw;
+  height: 100%;
+  background-image: url('https://cdn.shopify.com/s/files/1/0256/4594/0810/files/banner_1_900x.png?v=1615515282');
+  background-position: top;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  object-fit: cover;
+}
+
+.danimImg2 {
+  width: 30vw;
+  height: 50%;
+  background-image: url('https://cdn.shopify.com/s/files/1/0256/4594/0810/files/banner_3_540x.png?v=1615515309');
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  object-fit: cover;
+}
+
+.danimImg3 {
+  width: 30vw;
+  height: 50%;
+  background-image: url('https://cdn.shopify.com/s/files/1/0256/4594/0810/files/bn-2_676a7adf-ea7b-4fa1-8848-8517abdc2793_540x.jpg?v=1616643656');
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  object-fit: cover;
+}
+
+.team-img {
+  width: 97vw;
+  height: 75vh;
+  background-image: url('https://i.ibb.co/ZYbTd5b/imgimgimg.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* object-fit: cover; */
+}
+
+
+.team-img::after {
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+
+.body {
+  overflow-x: hidden !important;
+}
+
+.border-btn {
+  border-bottom: 2px solid white;
+}

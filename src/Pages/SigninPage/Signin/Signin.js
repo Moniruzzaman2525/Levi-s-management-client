@@ -52,7 +52,7 @@ const Signin = () => {
         event.preventDefault();
         const email = userInfo.email;
         await signInWithEmailAndPassword(userInfo.email, userInfo.password);
-        const { data } = await axios.post('http://localhost:5000/login', { email });
+        const { data } = await axios.post('https://hidden-crag-72651.herokuapp.com/login', { email });
         localStorage.setItem('accessToken', data.accessToken)
         console.log(data);
         navigate(from, { replace: true });

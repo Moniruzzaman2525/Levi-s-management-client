@@ -11,12 +11,12 @@ const AddItem = () => {
             email: e.target.email.value,
             name: e.target.name.value,
             price: e.target.price.value,
-            quentity: e.target.quantity.value,
+            quantity: e.target.quantity.value,
             supplier: e.target.supplier.value,
             description: e.target.description.value,
             img: e.target.img.value
         }
-        axios.post("http://localhost:5000/add", items)
+        axios.post("https://hidden-crag-72651.herokuapp.com/add", items)
             .then(response => {
                 console.log(response);
                 e.target.reset();

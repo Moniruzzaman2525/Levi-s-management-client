@@ -1,242 +1,162 @@
 [
     {
-        "price": "$59.47",
-        "img": "https://lsco.scene7.com/is/image/lsco/858330018-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "MID THIGH WOMEN'S SHORT",
-        "description": "An essential tee perfected with a ribbed neckline",
-        "suplier": "Dawn Lewis",
-        "quentity": "25"
+        "price": 50,
+        "img": "https://i.ibb.co/bWSjpgz/img1.png",
+        "name": "WEDGIE STRAIGHT FIT MAN's JEANS",
+        "description": "The Levi's® 511™ Slim is our streamlined fit that's not too skinny and not too loose. It's also so popular and well-loved that we consider it a classic. These jeans are slim in the thigh and straight throughout — a great everyday option that goes well with anything.",
+        "supplier": "Dawn Lewis",
+        "quantity": 25
     },
     {
-        "price": "$74.47",
-        "img": "https://lsco.scene7.com/is/image/lsco/196260168-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&cropN=0,0.35,1,0.65&wid=375&hei=500",
-        "name": "SKINNY WOMEN'S JEANS",
+        "price": 40,
+        "img": "https://i.ibb.co/ZgHLTWw/img1.png",
+        "name": "TRUCKER JACKET",
+        "description": "Our much loved, iconic Trucker Jacket gets a creative upgrade that works in a pieced quilted design reminiscent of retro puffers and jacket liners –– and in a classically Levi's® kind of way, it rocks that quilted liner style on the outside.",
+        "supplier": "Ashraful Islam",
+        "quantity": 25
+    },
+    {
+        "price": 50,
+        "img": "https://i.ibb.co/44HrPhL/img2-1.png",
+        "name": "514™ STRAIGHT FIT MEN'S JEANS",
+        "description": "Your everyday, go-to T-shirt, perfected with a relaxed fit and ultra-soft jersey. Wear it with your favorite blue jeans or some chino shorts—there's no wrong way to wear this timeless style.",
+        "supplier": "Borish Jhonson",
+        "quantity": 25
+    },
+    {
+        "price": 68,
+        "img": "https://i.ibb.co/y8YTCbK/img3.png",
+        "name": "JUNIE MUTTON SLEEVE BLOUSE",
+        "description": "With its slightly cropped silhouette and slim fit accentuated by ruffling at the upper arms, the Junie Mutton Sleeve Blouse has an eye-catching look and subtle femininity",
+        "supplier": "Sabbir Rahman",
+        "quantity": 25
+    },
+    {
+        "price": 70,
+        "img": "https://i.ibb.co/6BSPzC9/img4.png",
+        "name": "FARAH MIDI DRESS",
+        "description": "The prairie dress of Laura Ingalls Wilder's dreams: a relaxed, tiered silhouette with a feminine collar and allover floral we can't get enough of.",
+        "supplier": "Aonik Khan",
+        "quantity": 25
+    },
+    {
+        "price": 65,
+        "img": "https://i.ibb.co/Fhc9XYZ/img5.png",
+        "name": "MONTY SHERPA PULLOVER",
+        "description": "This is the type pullover that you pull on and never want to pull off. Made entirely of warm, snuggly sherpa, its highlighter trimmed zippers add a fun pop of color.",
+        "supplier": "Parbej Islam",
+        "quantity": 25
+    },
+    {
+        "price": 55,
+        "img": "https://i.ibb.co/PMZ8rs3/img6.png",
+        "name": "RED TAB™ HOODIE SWEATSHIRT",
+        "description": "Your average hoodie is a dependable layer you toss on your way out the door. But at its best, it makes a look and ties all the elements together. Crafted in 100% cotton French terry with a soft handfeel, this hoodie is most certainly the latter.",
+        "supplier": "Sikander Rahman",
+        "quantity": 25
+    },
+    {
+        "price": 35,
+        "img": "https://i.ibb.co/NYQwsCJ/img7.png",
+        "name": "CLASSIC WESTERN STANDARD FIT SHIRT",
+        "description": "Worn by pioneers and cowboys, our Western Shirts have been loved by generations for a reason: With their durable construction and iconic style, they epitomize rugged Americana.",
+        "supplier": "Rabbil Hasan",
+        "quantity": 25
+    },
+    {
+        "price": 95,
+        "img": "https://i.ibb.co/23jrCj5/img8.png",
+        "name": "505™ REGULAR FIT STRETCH MEN'S JEANS",
+        "description": "Jeans and a tee… name a more iconic duo, we’ll wait. With soft jersey and a streetwear-inspired relaxed fit, it'll go with every jean in your line-up.",
+        "supplier": "Repon Hasan",
+        "quantity": 25
+    },
+    {
+        "price": 45,
+        "img": "https://i.ibb.co/H4NhCf8/img10.png",
+        "name": "501® ORIGINAL FIT WOMEN'S JEANS",
+        "description": "Close your eyes. Think “jeans.” Now open. They were 501s®, right? They’re literally the blueprint for every pair of jeans in existence—burned into the world’s collective cortex ever since Levi Strauss (the man himself!) invented them in 1873. ",
+        "supplier": "Nurul Haq",
+        "quantity": 25
+    },
+    {
+        "price": 65,
+        "img": "https://i.ibb.co/gFwcnzn/img11.png",
+        "name": "RELAXED FIT SHORT SLEEVE T-SHIRT",
+        "description": "Jeans and a tee… name a more iconic duo, we’ll wait. With soft jersey and a streetwear-inspired relaxed fit, it'll go with every jean in your line-up.",
+        "supplier": "Aysha Siddika",
+        "quantity": 25
+    },
+    {
+        "price": 54,
+        "img": "https://i.ibb.co/xDyLw0W/img12.png",
+        "name": "LEVI'S® LOGO LONG SLEEVE T-SHIRT",
+        "description": "Supersoft jersey. A looks-good-with-everything silhouette. One of the most iconic logos in the game. What's not to love?",
+        "supplier": "Ashik Hasan",
+        "quantity": 25
+    },
+    {
+        "price": 61,
+        "img": "https://i.ibb.co/SVf8RBD/img14.png",
+        "name": "TAPER FIT MEN'S PANTS",
+        "description": "Introducing the new Levi’s® XX Chino EZ. With a full elastic waist and relaxed, tapered leg, they're easy, versatile and as comfortable as you can get while still looking presentable enough for work",
+        "supplier": "Dines Die",
+        "quantity": 25
+    },
+    {
+        "price": 35,
+        "img": "https://i.ibb.co/jrRbXR0/img15.png",
+        "name": "EDIE PACKABLE JACKET",
+        "description": "Our packable jackets are comfort and convenience all rolled into one. This standout has just the right amount of puffiness to keep you from looking like a marshmallow, while ensuring you stay toasty all the same.",
+        "supplier": "Mubin Shek",
+        "quantity": 25
+    },
+    {
+        "price": 54,
+        "img": "https://i.ibb.co/Rv0HhtG/img16.png",
+        "name": "WOMEN'S JEANS",
+        "description": "Features Levi's® Sculpt with Hypersoft: super-soft for enhanced comfort with supportive stretch",
+        "supplier": "Arif Hasan",
+        "quantity": 25
+    },
+    {
+        "price": 65,
+        "img": "https://i.ibb.co/s3QdQqv/img17.png",
+        "name": "505™ REGULAR FIT STRETCH MEN'S JEANS",
+        "description": "Also available in Men's Big & Tall sizes. Shop our 505™ Regular Fit Jeans in Big & Tall",
+        "supplier": "Shamol Patary",
+        "quantity": 25
+    },
+    {
+        "price": 31,
+        "img": "https://i.ibb.co/7NBgLyZ/img19.png",
+        "name": "501® SKINNY WOMEN'S JEANS",
         "description": "Close your eyes. Think “jeans.” Now open. They were 501s®, right? They’re literally the blueprint for every pair of jeans in existence",
-        "suplier": "Dodson Simpson",
-        "quentity": 29
+        "supplier": "Hasib Hasan",
+        "quantity": 25
     },
     {
-        "price": "$79.51",
-        "img": "https://lsco.scene7.com/is/image/lsco/778790076-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "RIBCAGE WOMEN'S SHORTS",
-        "description": "The high rise shorts you've been searching for. Made with the same fit as our Ribcage Jeans, these feature a waist-nipping high rise and a slightly looser fit through the seat and thigh—because shorts should be comfortable.",
-        "suplier": "Tami Delgado",
-        "quentity": "30"
+        "price": 36,
+        "img": "https://i.ibb.co/crzPgVy/img20.png",
+        "name": "JEANS SHORT",
+        "description": "These look like skinny jeans without feeling like them. And the best part? The ultra-streamlined fit was designed to highlight your shoes.",
+        "supplier": "Ayon Juddar",
+        "quantity": 25
     },
     {
-        "price": "$88.68",
-        "img": "https://lsco.scene7.com/is/image/lsco/268720014-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "HIGH LOOSE WOMAN'S JEANS",
-        "description": "Let loose with this modern interpretation of a classic '90s style. These jeans features a wide leg and flattering high rise. What does that mean for you? A cool, vintage-inspired style that gives you legs for days.",
-        "suplier": "Walter Chen",
-        "quentity": "38"
+        "price": 51,
+        "img": "https://i.ibb.co/8NbCSff/img22.png",
+        "name": "LITTLE GIRLS T-SHIRT",
+        "description": "The timeless crewneck T-shirt, crafted from ultra-soft jersey and perfected with a boxy, cropped fit.",
+        "supplier": "Junayed Hasan",
+        "quantity": 25
     },
     {
-        "price": "$57.17",
-        "img": "https://lsco.scene7.com/is/image/lsco/A19070001-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "SNACK SWEATSHORTS",
-        "description": "Who's hungry? Grab a bike in the Levi's® Women's Graphic Snack sweatshortss, cozy fleece bottoms that's part of a complete diet.",
-        "suplier": "Bishop Monroe",
-        "quentity": "15"
-    },
-    {
-        "price": "$976.52",
-        "img": "https://lsco.scene7.com/is/image/lsco/299450119-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "ORIGINAL TRUCKER JACKET",
-        "description": "A Trucker Jacket makes an outfit. You'd be hard-pressed to find a jacket with an easier shape, more versatile weight or inherent sense of cool. Bonus: The deep inside pockets are roomy enough for your essentials.",
-        "suplier": "Zimmerman Barry",
-        "quentity": "31"
-    },
-    {
-        "price": "$60.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A27930000-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "EUCLID ANORAK JACKET",
-        "description": "The '90s are back and we're so here for it. Brought to life in a washed pastel lavender, this jacket channels the best of the decade.",
-        "suplier": "Cleo Roberson",
-        "quentity": "50"
-    },
-    {
-        "price": "$80.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/005010193-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "ORIGINAL FIT MAN'S JEANS",
-        "description": "Close your eyes. Think “jeans.” Now open. They were 501s®, right? With a classic straight leg and iconic styling, they’re literally the blueprint for every pair of jeans in existence — burned into the world’s collective cortex ever since Levi Strauss (the man himself!) invented them in 1873. To this day they've never gone out of style. And they never will.",
-        "suplier": "Madeleine Benjamin",
-        "quentity": "59"
-    },
-    {
-        "price": "$68.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/005010000-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "SHRIND-TO-FIT",
-        "description": "Close your eyes. Think “jeans.” Now open. They were 501s®, right? With a classic straight leg and iconic styling, they’re literally the blueprint for every pair of jeans in existence — burned into the world’s collective cortex ever since Levi Strauss (the man himself!) invented them in 1873. To this day they've never gone out of style. And they never will.",
-        "suplier": "Bullock Barlow",
-        "quentity": "55"
-    },
-    {
-        "price": "$52.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/055101129-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&cropN=0,0.35,1,0.65&wid=375&hei=500",
-        "name": "FLES JEANS",
-        "description": "A worn-in, ’90s-inspired take on our Original Trucker Jacket. Levi’s® iconic, instantly recognizable jean jacket has been a symbol of individual self-expression for decades. With a boxy silhouette, this Vintage Fit Trucker Jacket is built with more room in the shoulder and sleeves.",
-        "suplier": "Leola Oneill",
-        "quentity": "60"
-    },
-    {
-        "price": "$61.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/Levis/clothing/723340223-front-pdp.jpg?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "TRUCKER JACKET",
-        "description": "Levi’s® 502™ Regular Taper Jeans are a more refined, modern alternative to the straight jean you love. Extra room in the thigh and a clean, tapered cut make them easy to style without compromising comfort.",
-        "suplier": "Bullock Barlow",
-        "quentity": "75"
-    },
-    {
-        "price": "$98.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/295070990-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&cropN=0,0.35,1,0.65&wid=375&hei=500",
-        "name": "FLEX MEN'S JEANS",
-        "description": "The are two secrets to a good hoodie: comfort and versatility. With soft French terry and an easy-to-style, relaxed fit, this one's got both.",
-        "suplier": "Myra Horton",
-        "quentity": "61"
-    },
-    {
-        "price": "$49.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A06400002-front-pdp-lse?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "SUNSET TRUCKER JACKET",
-        "description": "With a vintage fit, supersoft French terry and a unisex design, these joggers have everything you want in sweats, and none of the stuff you don’t. Your other clothes will miss you.",
-        "suplier": "Ashlee Schultz",
-        "quentity": "71"
-    },
-    {
-        "price": "$56.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/288940239-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "SLIM TAPOR",
-        "description": "Our beloved Vintage Fit Trucker Jacket—brought to life with a patchworrk design. Future you will thank you.n",
-        "suplier": "Leola Oneill",
-        "quentity": "69"
-    },
-    {
-        "price": "$39.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A17760003-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "FADON DENIM SHIRT",
+        "price": 41,
+        "img": "https://i.ibb.co/Sr9ZrDg/imgaa.png",
+        "name": "SUNSET CAMP SHIRT",
         "description": "No summer line-up's complete without a camp shirt (or three). It breathes the relaxed vibe that summer's all about, but is slightly more stepped-up than a T-shirt.",
-        "suplier": "Cleo Roberson",
-        "quentity": "76"
-    },
-    {
-        "price": "$51.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A19810000-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "TRUCKER JACKET",
-        "description": "Trucker Jacket is our cool borrowed-from-the-boys take on the original Trucker Jacket. With a more oversized silhouette, it's perfect for layering over sweaters and hoodies.",
-        "suplier": "Madeleine Benjamin",
-        "quentity": "96"
-    },
-    {
-        "price": "$54.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A17430004-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "90's TRUCKER JACKET",
-        "description": "A Trucker Jacket makes an outfit. You'd be hard-pressed to find a jacket with an easier shape, more versatile weight or inherent sense of cool. Bonus: This throwback cut features a pitched silhouette for a distinctly ‘90s feel.",
-        "suplier": "Virginia Calhoun",
-        "quentity": "85"
-    },
-    {
-        "price": "$62.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/857440030-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "CHERYAL MITCHELL",
-        "description": "A chore coat unlike any other. We took this classic style and gave it a mini update with a non-traditional shrunken construction. And because a jacket is only as good as its pockets, we gave this one plenty—so you can leave the bag at home.",
-        "suplier": "Rivers Mayo",
-        "quentity": "52"
-    },
-    {
-        "price": "$68.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A19750001-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "SHRUNKEN CHORE COAT",
-        "description": "A chore coat unlike any other. We took this classic style and gave it a mini update with a non-traditional shrunken construction. And because a jacket is only as good as its pockets, we gave this one plenty—so you can leave the bag at home.",
-        "suplier": "Esperanza Lloyd",
-        "quentity": "102"
-    },
-    {
-        "price": "$80.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A22240001-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "ORANGE TAB JACKET",
-        "description": "An emblem of the pioneering spirit, the Trucker Jacket is a Levi’s® original that’s made history. Our iconic, instantly recognizable jean jacket has been a symbol of individual self-expression for decades. It’s also a perfect in-between layer that looks just as good over a tee or under a coat.",
-        "suplier": "Meagan Carrillo",
-        "quentity": "84"
-    },
-    {
-        "price": "$45.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A18890001-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "SLIM RIB T-SHIRT",
-        "description": "A Trucker Jacket makes an outfit. You'd be hard-pressed to find a jacket with an easier shape, more versatile weight or inherent sense of cool. This relaxed cut features an elongated front hem and a cozy, pajama-like fit.",
-        "suplier": "Myra Horton",
-        "quentity": "68"
-    },
-    {
-        "price": "$98.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/361360000-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "ORIGINAL SHERPA TRUCKER JACKET",
-        "description": "A classic with a twist, our Sherpa Trucker is a cozy take on our original Trucker Jacket that’s built with a fuzzy sherpa lining for extra warmth. This amazingly versatile staple combines the cool and the cozy all while keeping it as authentic as its namesake.",
-        "suplier": "Shifiq Mahbub",
-        "quentity": "108"
-    },
-    {
-        "price": "$65.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A19120001-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "CAPOLA PUFF SLEEVE BLOUSE",
-        "description": "The perfect outfit for an afternoon in the park? This versatile Capola Top and whatever you like on bottom. Pair with sunglasses and a picnic basket for the sweetest look of the season.",
-        "suplier": "Kobir Khan",
-        "quentity": "58"
-    },
-    {
-        "price": "$65.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/344870001-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "HYBRID TRUCKER JACKETS",
-        "description": "A little oversized, a lot of attitude. Designed with an extra-relaxed silhouette, our Levi’s® Ex-Boyfriend Trucker Jacket is an ideal outer layer whose slight drop shoulder creates a cool, borrowed-from-the-boys look. This unique hybrid model features comfy cloth sleeves and a frayed bottom hem",
-        "suplier": "Saridur Rahman",
-        "quentity": "58"
-    },
-    {
-        "price": "$56.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/278890005-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "RIBCAGE DENIM SKIRT",
-        "description": "Our highest high rise, reimagined as a versatile denim skirt. It's become a hip-slimming and waist-defining obsession",
-        "suplier": "Ayon Juddar",
-        "quentity": "140"
-    },
-    {
-        "price": "$95.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/398640004-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "10' MEN'S SHORTS",
-        "description": "Good denim shorts need no fuss or frills. That's why we kept it simple and designed these with just this basics: quality denim, classic 5-pocket styling and a versatile fit that hits just above the knees.",
-        "suplier": "Milon Midhra",
-        "quentity": "105"
-    },
-    {
-        "price": "$98.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A18300000-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "PANHANDLE JACKET",
-        "description": "Grandpa fishing vibes—and we mean that in the best of ways. Constructed with sturdy ripstop, roomy snap pockets and a contrast collar, this jacket will do the trick whether you're camping, glamping or exploring the city.",
-        "suplier": "Parbej Hasan",
-        "quentity": "100"
-    },
-    {
-        "price": "$79.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A26620001-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "STOCK TRUCKER JACKET",
-        "description": "Some styles transcend time and trend, and somehow manage to get better with age. A denim jacket is without a doubt one of them. We made this one with a boxy fit and distinct pockets",
-        "suplier": "Monir Hasan",
-        "quentity": "95"
-    },
-    {
-        "price": "$72.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/A19190000-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "RELAXED FIT WESTERN SHIRT",
-        "description": "Our iconic Western Shirt—reimagined with a contemporary relaxed fit. With durable denim and timeless style, this is the kind of piece you'll wear for years and hand down for generations to come",
-        "suplier": "Ashraful Islam",
-        "quentity": "58"
-    },
-    {
-        "price": "$55.30",
-        "img": "https://lsco.scene7.com/is/image/lsco/866270107-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=375&hei=500",
-        "name": "1 POCKET STANDARD FIT SHIRT",
-        "description": "Casual, but not sloppy. Put-together, but not stuffy. Wear this shirt buttoned to the top for a classic look, or ignore the buttons altogether and wear open, layered over your favorite T-shirt for a more relaxed style. There's no wrong way to wear this timeless staple.",
-        "suplier": "Sabbir Rahman",
-        "quentity": "98"
+        "supplier": "Monir Hasan",
+        "quantity": 25
     }
 ]

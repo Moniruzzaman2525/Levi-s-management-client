@@ -14,7 +14,7 @@ const MyItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/add?email=${email}`
+            const url = `https://hidden-crag-72651.herokuapp.com/add?email=${email}`
             try {
                 const { data } = await axiosPrivate.get(url);
                 setAddItems(data);

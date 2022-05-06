@@ -10,7 +10,7 @@ const Services = () => {
 
     return (
         <div className='w-full'>
-            <h2 className='text-4xl flex justify-center m-8 items-center'>Inventory</h2>
+            <h2 className='text-4xl text-center m-8'>Inventory</h2>
             <div className='md:grid grid-cols-3 container mx-auto gap-y-8'>
                 {
                     newServices.map(service => <Service
@@ -19,7 +19,7 @@ const Services = () => {
                     ></Service>)
                 }
             </div>
-            <Link to={'/services'}><button>Manage Inventory</button></Link>
+            <Link to={'/manage'}><button>Manage Inventory</button></Link>
         </div>
     );
 };

@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Headers from './SharePage/Headers/Headers';
-import AllServices from './Pages/AllServices/AllServices';
 import Home from './Pages/Home/Home';
 import Update from './Pages/Update/Update';
 import ManageItems from './Pages/ManageItmes/ManageItems';
@@ -12,6 +11,7 @@ import RequireAuth from './Pages/SigninPage/RequireAuth/RequireAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MyItems from './Pages/ManageItmes/MyItems/MyItems';
+import Footer from './SharePage/Footer/Footer';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/services' element={<AllServices></AllServices>}></Route>
+
         <Route path='/manage' element={<ManageItems></ManageItems>}></Route>
         <Route path='/add' element={<AddItem></AddItem>}></Route>
         <Route path='/update/:id' element={<RequireAuth><Update></Update></RequireAuth>}></Route>
@@ -28,6 +28,7 @@ function App() {
         <Route path='myitems' element={<RequireAuth><MyItems></MyItems></RequireAuth>}></Route>
         <Route path='signup' element={<Signup></Signup>}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
     </div>
   );
