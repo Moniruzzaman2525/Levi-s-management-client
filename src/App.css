@@ -90,18 +90,45 @@ body {
 }
 
 .img1 {
-  width: 100%;
-  height: 100%;
-  background-image: url('https://i.ibb.co/NjDF3Lc/1.png');
+  width: 100vw;
+  height: 75vh;
+  background-image: url('https://i.ibb.co/K7mfJpy/banner6.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.img1 {
-  width: 100%;
-  height: 100%;
-  background-image: url('https://i.ibb.co/NjDF3Lc/1.png');
+.img2 {
+  width: 100vw;
+  height: 75vh;
+  background-image: url('https://i.ibb.co/jf6FMMF/banner2.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img3 {
+  width: 100vw;
+  height: 75vh;
+  background-image: url('https://i.ibb.co/dGX6bxT/banner1.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img4 {
+  width: 100vw;
+  height: 75vh;
+  background-image: url('https://i.ibb.co/Df76Fg2/banner5.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img5 {
+  width: 100vw;
+  height: 75vh;
+  background-image: url('https://i.ibb.co/XtXvC8D/banner4.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

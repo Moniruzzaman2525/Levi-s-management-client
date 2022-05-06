@@ -9,10 +9,9 @@ const Services = () => {
     const newServices = services.slice(0, 6)
 
     return (
-        <div>
-            <h2>services{services.length}</h2>
-            <Link to={'/services'}><button>Manage Inventory</button></Link>
-            <div className='grid grid-cols-3 '>
+        <div className='w-full'>
+            <h2 className='text-4xl flex justify-center m-8 items-center'>Inventory</h2>
+            <div className='md:grid grid-cols-3 container mx-auto gap-y-8'>
                 {
                     newServices.map(service => <Service
                         service={service}
@@ -20,6 +19,7 @@ const Services = () => {
                     ></Service>)
                 }
             </div>
+            <Link to={'/services'}><button>Manage Inventory</button></Link>
         </div>
     );
 };
