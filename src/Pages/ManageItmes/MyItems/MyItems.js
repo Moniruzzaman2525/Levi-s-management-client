@@ -10,6 +10,7 @@ import Items from './Items/Items';
 const MyItems = () => {
     const [user] = useAuthState(auth)
     const [addItems, setAddItems] = useState([]);
+    // console.log(addItems);
     const navigate = useNavigate();
     useEffect(() => {
         const getItems = async () => {
@@ -31,13 +32,15 @@ const MyItems = () => {
     }, [user]);
     console.log(addItems);
     return (
-        <div>
-            <h1>Items: {addItems.length}</h1>
-            <h1>Items: {user.email}</h1>
-            <h1>Items: {user.displayName}</h1>
-            {
-                addItems.map(item => <Items item={item} key={item._id}></Items>)
-            }
+        <div className='mt-10'>
+            <h1 className='text-2xl text-center'>Items: {addItems.length}</h1>
+            <h1 className='text-2xl text-center'>User Name: {user.displayName}</h1>
+            <h1 className='text-2xl text-center'>User Email: {user.email}</h1>
+            <div className='md:grid grid-cols-2 mt-10'>
+                {
+                    addItems.map(item => <Items item={item} key={item._id}></Items>)
+                }
+            </div>
         </div>
     );
 };

@@ -1,12 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
-import { IoLogoGoogleplus } from 'react-icons/io';
-import { FiGithub } from 'react-icons/fi';
-import { FiFacebook } from 'react-icons/fi';
+import useToken from '../../../Hooks/useToken';
+import Loading from '../../../SharePage/Loading/Loading';
+// import { IoLogoGoogleplus } from 'react-icons/io';
+import SocialLogin from '../SocialLogin/SocialLogin';
+
 
 const Signin = () => {
     const navigate = useNavigate()
@@ -27,6 +29,8 @@ const Signin = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [token] = useToken(user);
+    const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
     const handleEmailChange = event => {
         const emailRegex = /\S+@\S+\.\S+/;
         const validEmail = emailRegex.test(event.target.value);
@@ -37,7 +41,21 @@ const Signin = () => {
             setErrors({ ...errors, email: "Invalid Email" });
             setUserInfo({ ...userInfo, email: "" })
         }
+    }
 
+    const resetPassword = async () => {
+        const email = userInfo.email;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast.success('Send email!!!');
+        }
+        else {
+            toast.error('Please enter your email address!!!')
+        }
+    }
+
+    if (loading || sending) {
+        <Loading></Loading>
     }
     const handlePassChange = event => {
         const passwordRegex = /.{6}/;
@@ -53,12 +71,20 @@ const Signin = () => {
     }
     const handleSignIn = async event => {
         event.preventDefault();
-        const email = userInfo.email;
         await signInWithEmailAndPassword(userInfo.email, userInfo.password);
-        const { data } = await axios.post('https://hidden-crag-72651.herokuapp.com/login', { email });
-        localStorage.setItem('accessToken', data.accessToken)
-        console.log(data);
+        event.target.reset();
+    }
+    if (token) {
         navigate(from, { replace: true });
+    }
+    if (user) {
+        toast.success('User Sign In Successfully')
+    }
+    let errorMsg;
+    if (error || resetError) {
+        errorMsg =
+            <p className='text-red-700'>Error : {error?.message}
+            </p>;
     }
     useEffect(() => {
         if (error) {
@@ -69,7 +95,7 @@ const Signin = () => {
                 case "auth/user-not-found":
                     toast.error("Please Register")
                     break;
-                case "auth/invalid-password":
+                case "auth/wrong-password":
                     toast.error("Wrong Password");
                     break;
                 case "something went wrong":
@@ -80,14 +106,11 @@ const Signin = () => {
     }, [error]);
 
     return (
-        <div className='md:grid  grid-cols-2'>
+        <div className='md:grid mb-20  grid-cols-2'>
             <div className='font-custom'>
                 <h2 style={{ color: '#64B9B4' }} className='text-center text-3xl py-10'>Sign in to....</h2>
-                <div className='flex mb-5 justify-center'>
-                    <button className='rounded-full p-5 mr-10 bg-white'><FiFacebook className='text-xl'></FiFacebook></button>
-                    <button className='rounded-full p-5 mr-10 bg-white'><IoLogoGoogleplus className='text-xl'></IoLogoGoogleplus></button>
-                    <button className='rounded-full p-5 mr-10 bg-white'><FiGithub className='text-xl'></FiGithub></button>
-                </div>
+                {/* <button onClick={() => signInWithGoogle()} className='rounded-full p-5 mr-10 bg-white'><IoLogoGoogleplus className='text-xl'></IoLogoGoogleplus></button> */}
+                <SocialLogin></SocialLogin>
                 <p style={{ color: '#494949' }} className='text-center text-xl'>or use your email account</p>
                 <div className='w-3/6 mx-auto py-20 h-[50vh]'>
                     <form onSubmit={handleSignIn}>
@@ -101,8 +124,10 @@ const Signin = () => {
                             <input type="password" onChange={handlePassChange} id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Password' required />
                             {errors?.password && <p className='text-red-600 font-bold mt-2'>{errors.password}</p>}
                         </div>
+                        {errorMsg}
                         <button type="submit" className="text-white rounded px-5 py-4 text-xl font-bold sign-btn">SIGN IN</button>
                     </form>
+                    <p>Forget Password <button type="button" class="btn btn-link text-decoration-none" onClick={resetPassword}>Rest Password</button></p>
                 </div>
             </div>
             <div className="login-img relative font-custom">

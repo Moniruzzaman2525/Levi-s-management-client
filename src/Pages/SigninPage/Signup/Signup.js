@@ -3,9 +3,9 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
-import { IoLogoGoogleplus } from 'react-icons/io';
-import { FiGithub } from 'react-icons/fi';
-import { FiFacebook } from 'react-icons/fi';
+import useToken from '../../../Hooks/useToken';
+import Loading from '../../../SharePage/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Signup = () => {
     const [userInfo, setUserInfo] = useState({
@@ -23,8 +23,9 @@ const Signup = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [token] = useToken(user);
 
     const handleEmailChange = event => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -38,6 +39,7 @@ const Signup = () => {
         }
 
     }
+
     const handlePassChange = event => {
         const passwordRegex = /.{6}/;
         const validPassword = passwordRegex.test(event.target.value);
@@ -61,12 +63,11 @@ const Signup = () => {
     const handleSignUp = async event => {
         event.preventDefault();
         const displayName = event.target.name.value;
-        // console.log(displayName);
-        // console.log(email, password);
         await createUserWithEmailAndPassword(userInfo.email, userInfo.password);
         await updateProfile({ displayName });
-    }
-    // console.log(user);
+        event.target.reset();
+    };
+
     useEffect(() => {
         if (error) {
             switch (error?.code) {
@@ -85,23 +86,26 @@ const Signup = () => {
             }
         }
     }, [error]);
+    if (user) {
+        toast.success('User Sign Up Successfully')
+    }
+    if (loading || updating) {
+        <Loading></Loading>
+    };
+    if (error || updateError) {
+        toast.error('Something Went Wrong!!!')
+    }
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
-    useEffect(() => {
-        if (user) {
-            navigate(from);
-        }
-    }, [user])
+    if (token) {
+        navigate(from, { replace: true });
+    }
     return (
         <div className='md:grid mb-20 grid-cols-2'>
             <div className='font-custom'>
-                <h2 style={{ color: '#64B9B4' }} className='text-center text-3xl py-10'>Create Account</h2>
-                <div className='flex mb-5 justify-center'>
-                    <button className='rounded-full p-5 mr-10 bg-white'><FiFacebook className='text-xl'></FiFacebook></button>
-                    <button className='rounded-full p-5 mr-10 bg-white'><IoLogoGoogleplus className='text-xl'></IoLogoGoogleplus></button>
-                    <button className='rounded-full p-5 mr-10 bg-white'><FiGithub className='text-xl'></FiGithub></button>
-                </div>
+                <h2 style={{ color: '#64B9B4' }} className='text-center text-3xl py-5'>Create Account</h2>
+                <SocialLogin></SocialLogin>
                 <p style={{ color: '#494949' }} className='text-xl text-center'>or use your email for registration</p>
                 <div className='w-3/6 mx-auto py-20'>
                     <form onSubmit={handleSignUp}>

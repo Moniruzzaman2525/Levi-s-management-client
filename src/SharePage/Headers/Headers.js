@@ -18,55 +18,38 @@ const Headers = () => {
                     <div className="flex md:flex-col md:jus justify-between">
                         <div className="flex items-center h-16 justify-between">
                             <div className="flex-shrink-0">
-                                <img
-                                    className="h-8 w-8"
-                                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                                    alt="Workflow"
-                                />
+                                <Link to={'/'}>
+                                    <img
+                                        className="h-8 w-20"
+                                        src="https://i.ibb.co/6D8JN7R/Levis-logo-quer-svg.png"
+                                        alt="Workflow"
+                                    /></Link>
                             </div>
                             <div className="hidden md:block">
-                                <div className="ml-10 flex items-baseline space-x-4">
-                                    {/* <Link
-                                        to="/update"
-                                        className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                                    >
-                                        update
-                                    </Link> */}
+                                <div className="ml-5 flex items-baseline ">
 
-                                    {/* <a
-                                        href="#"
-                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                    >
-                                        Team
-                                    </a>
-
-                                    <a
-                                        href="#"
-                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                    >
-                                        Projects
-                                    </a>
-
-                                    <a
-                                        href="#"
-                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                    >
-                                        Calendar
-                                    </a> */}
                                     {
-                                        user ? <h4 style={{ color: '#64B9B4' }} className='text-white ml-5'>{user.displayName}</h4> : ""
+                                        user && <Link to={'/manage'}><button className='hover:text-white px-3 rounded-md text-lg font-bold' style={{ color: '#64B9B4' }} type="button">MANAGE ITEMS</button></Link>
+
                                     }
                                     {
-                                        user && <button style={{ color: '#64B9B4' }} type="button">MyItems</button>
+                                        user && <Link to={'/add'}><button className='hover:text-white px-3 rounded-md text-lg font-bold' style={{ color: '#64B9B4' }} type="button">ADD ITEMS</button></Link>
 
+                                    }
+                                    {
+                                        user && <Link to={'/myitems'}><button className='hover:text-white px-3 rounded-md text-lg font-bold' style={{ color: '#64B9B4' }} type="button">MY ITEMS</button></Link>
+
+                                    }
+                                    {
+                                        user ? <h4 style={{ color: '#64B9B4' }} className='text-white hover:text-white px-3 rounded-md text-lg font-bold ml-5'>{user.displayName}</h4> : ""
                                     }
 
                                     {
-                                        user ? <button style={{ color: '#64B9B4' }} className='' onClick={logout}>SIGN OUT</button> :
+                                        user ? <button style={{ color: '#64B9B4' }} className='hover:text-white px-3 rounded-md text-lg font-bold' onClick={logout}>SIGN OUT</button> :
                                             <Link
                                                 style={{ color: '#64B9B4' }}
                                                 to="/signin"
-                                                className="font-bold text-xl"
+                                                className="font-bold text-lg"
                                             >
                                                 SIGN IN
                                             </Link>
@@ -81,11 +64,11 @@ const Headers = () => {
                         </div>
                         <div className="-mr-2 flex md:hidden">
                             {
-                                user ? <button style={{ color: '#64B9B4' }} className='mr-5' onClick={logout}>SIGN OUT</button> :
+                                user ? <button style={{ color: '#64B9B4' }} className='mr-5 hover:text-white px-3 rounded-md text-lg font-bold' onClick={logout}>SIGN OUT</button> :
                                     <Link
                                         to="/signin"
                                         style={{ color: '#64B9B4' }}
-                                        className="mr-5 relative top-5 hover:text-white px-3 rounded-md text-sm font-medium"
+                                        className="mr-5 relative top-5 hover:text-white px-3 rounded-md text-lg font-bold"
                                     >
                                         SIGN IN
                                     </Link>
@@ -94,7 +77,8 @@ const Headers = () => {
 
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
-                                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                style={{ backgroundColor: '#64B9B4' }}
+                                className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
                                 aria-controls="mobile-menu"
                                 aria-expanded="false"
                             >
@@ -152,33 +136,18 @@ const Headers = () => {
                             <div className="md:hidden" id="mobile-menu">
 
                                 <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                                    {/* <Link
-                                    to="update"
-                                    className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
-                                >
-                                    update
-                                </Link> */}
+                                    {
+                                        user && <Link to={'/manage'}><button className='border-header block hover:text-white px-3 text-lg font-bold' style={{ color: '#64B9B4' }} type="button">MANAGE ITEMS</button></Link>
 
-                                    {/* <a
-                                    href="#"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                >
-                                    Team
-                                </a>
+                                    }
+                                    {
+                                        user && <Link to={'/myitems'}><button className='border-header block hover:text-white px-3 text-lg font-bold' style={{ color: '#64B9B4' }} type="button">ADD ITEMS</button></Link>
 
-                                <a
-                                    href="#"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                >
-                                    Projects
-                                </a>
+                                    }
+                                    {
+                                        user && <Link to={'/myitems'}><button className='border-header block hover:text-white px-3 text-lg font-bold' style={{ color: '#64B9B4' }} type="button">MY ITEMS</button></Link>
 
-                                <a
-                                    href="#"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                >
-                                    Calendar
-                                </a> */}
+                                    }
 
 
                                 </div>
