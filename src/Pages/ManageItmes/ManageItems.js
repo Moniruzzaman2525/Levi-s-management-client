@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import useServices from '../../Hooks/useServices';
 import Manage from './Manage/Manage';
 
@@ -18,14 +19,17 @@ const ManageItems = () => {
                 .then(res => res.json())
                 .then(data => console.log('hello', data))
             const updateService = services.filter(service => service._id !== id);
-            setServices(updateService)
-            console.log(updateService);
-            console.log(services);
+            setServices(updateService);
+            toast.success('Items Delate Successful')
+            // console.log(updateService);
+            // console.log(services);
         }
     }
     return (
         <div className='container mx-auto w-full'>
-            <Link to={'/add'}><button className='text-xl rounded-lg p-1 mr-6 md:p-2 bg-lime-700 text-white flex justify-center m-8 items-center'>Add New Item</button></Link>
+            <Link to={'/add'}><button className=" text-white font-bold rounded-lg text-2xl px-5 my-10 py-4" style={{ backgroundColor: '#64B9B4' }}>
+                Add New Item
+            </button></Link>
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg container mx-auto">
                 <table className="w-full table-aa text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">

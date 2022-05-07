@@ -1,3 +1,10 @@
+.body {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -137,21 +144,25 @@ body {
 .login-img {
   width: 100%;
   height: 80vh;
-  background-image: url('https://img.freepik.com/free-vector/display-podium-3d-rendering-vector-minimal-pastel-product-backdrop_53876-117234.jpg?w=740&t=st=1651900381~exp=1651900981~hmac=f1a0459defaa62cf3eace577991511e07a0da2611c1d2ad2d9c869eca61daca1');
+  background-image: url('https://img.freepik.com/free-photo/turquoise-matt-suede-fabric-background-velvet-texture_113767-1486.jpg?w=900');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* .danimImg2 {
-  width: 30vw;
-  height: 50%;
-  background-image: url('https://cdn.shopify.com/s/files/1/0256/4594/0810/files/banner_3_540x.png?v=1615515309');
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
-/* object-fit: cover;
-} */
+.sign-btn {
+  background-color: #64B9B4;
+}
+
+.border-login {
+  border: 2px solid white;
+}
+
+.border-login:hover {
+  background-color: white;
+  color: #282c34;
+  border: 0;
+}
 
 .danimImg3 {
   width: 30vw;
@@ -163,7 +174,7 @@ body {
   object-fit: cover;
 }
 
-*/ .team-img {
+.team-img {
   width: 97vw;
   height: 75vh;
   background-image: url('https://i.ibb.co/ZYbTd5b/imgimgimg.webp');
@@ -193,4 +204,10 @@ body {
 
 .border-btn {
   border-bottom: 2px solid white;
+}
+
+/* google font */
+
+.font-custom {
+  font-family: 'Poppins', sans-serif;
 }

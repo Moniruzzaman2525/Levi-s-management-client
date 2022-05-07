@@ -12,14 +12,14 @@ const Manage = ({ service, handleUserDelate }) => {
                 {service.quantity}
             </td>
             <td className="px-6 py-4">
-                {service.price}
+                ${service.price}
             </td>
             <td className="px-6 py-4">
                 {service.supplier}
             </td>
             <td className="px-6 py-4 text-right">
-                <Link to={`/update/${service._id}`}><button type="button" className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Green</button></Link>
-                <button className='m-4 p-1 mr-6 p-2 bg-lime-700 rounded-lg text-white' onClick={() => handleUserDelate(service._id)}>Delate</button>
+                <button className=" text-white font-bold rounded-lg text-sm mb-5 mr-3 px-5 py-2.5" style={{ backgroundColor: '#64B9B4' }} onClick={() => handleUserDelate(service._id)}>Delate</button>
+                <Link className=" text-white rounded-lg text-sm px-5  mt-5 py-3" style={{ backgroundColor: '#64B9B4' }} to={`/update/${service._id}`}><button className='font-bold' type="button" >Update Items</button></Link>
             </td>
         </tr>
     );

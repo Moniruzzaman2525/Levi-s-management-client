@@ -5,6 +5,7 @@
         "name": "WEDGIE STRAIGHT FIT MAN's JEANS",
         "description": "The Levi's® 511™ Slim is our streamlined fit that's not too skinny and not too loose. It's also so popular and well-loved that we consider it a classic. These jeans are slim in the thigh and straight throughout — a great everyday option that goes well with anything.",
         "supplier": "Dawn Lewis",
+        "sold": 23,
         "quantity": 25
     },
     {
@@ -13,6 +14,7 @@
         "name": "TRUCKER JACKET",
         "description": "Our much loved, iconic Trucker Jacket gets a creative upgrade that works in a pieced quilted design reminiscent of retro puffers and jacket liners –– and in a classically Levi's® kind of way, it rocks that quilted liner style on the outside.",
         "supplier": "Ashraful Islam",
+        "sold": 13,
         "quantity": 25
     },
     {
@@ -21,6 +23,7 @@
         "name": "514™ STRAIGHT FIT MEN'S JEANS",
         "description": "Your everyday, go-to T-shirt, perfected with a relaxed fit and ultra-soft jersey. Wear it with your favorite blue jeans or some chino shorts—there's no wrong way to wear this timeless style.",
         "supplier": "Borish Jhonson",
+        "sold": 21,
         "quantity": 25
     },
     {
@@ -29,6 +32,7 @@
         "name": "JUNIE MUTTON SLEEVE BLOUSE",
         "description": "With its slightly cropped silhouette and slim fit accentuated by ruffling at the upper arms, the Junie Mutton Sleeve Blouse has an eye-catching look and subtle femininity",
         "supplier": "Sabbir Rahman",
+        "sold": 10,
         "quantity": 25
     },
     {
@@ -37,6 +41,7 @@
         "name": "FARAH MIDI DRESS",
         "description": "The prairie dress of Laura Ingalls Wilder's dreams: a relaxed, tiered silhouette with a feminine collar and allover floral we can't get enough of.",
         "supplier": "Aonik Khan",
+        "sold": 5,
         "quantity": 25
     },
     {
@@ -45,6 +50,7 @@
         "name": "MONTY SHERPA PULLOVER",
         "description": "This is the type pullover that you pull on and never want to pull off. Made entirely of warm, snuggly sherpa, its highlighter trimmed zippers add a fun pop of color.",
         "supplier": "Parbej Islam",
+        "sold": 3,
         "quantity": 25
     },
     {
@@ -53,6 +59,7 @@
         "name": "RED TAB™ HOODIE SWEATSHIRT",
         "description": "Your average hoodie is a dependable layer you toss on your way out the door. But at its best, it makes a look and ties all the elements together. Crafted in 100% cotton French terry with a soft handfeel, this hoodie is most certainly the latter.",
         "supplier": "Sikander Rahman",
+        "sold": 32,
         "quantity": 25
     },
     {
@@ -61,6 +68,7 @@
         "name": "CLASSIC WESTERN STANDARD FIT SHIRT",
         "description": "Worn by pioneers and cowboys, our Western Shirts have been loved by generations for a reason: With their durable construction and iconic style, they epitomize rugged Americana.",
         "supplier": "Rabbil Hasan",
+        "sold": 13,
         "quantity": 25
     },
     {
@@ -69,6 +77,7 @@
         "name": "505™ REGULAR FIT STRETCH MEN'S JEANS",
         "description": "Jeans and a tee… name a more iconic duo, we’ll wait. With soft jersey and a streetwear-inspired relaxed fit, it'll go with every jean in your line-up.",
         "supplier": "Repon Hasan",
+        "sold": 5,
         "quantity": 25
     },
     {
@@ -77,6 +86,7 @@
         "name": "501® ORIGINAL FIT WOMEN'S JEANS",
         "description": "Close your eyes. Think “jeans.” Now open. They were 501s®, right? They’re literally the blueprint for every pair of jeans in existence—burned into the world’s collective cortex ever since Levi Strauss (the man himself!) invented them in 1873. ",
         "supplier": "Nurul Haq",
+        "sold": 8,
         "quantity": 25
     },
     {
@@ -85,6 +95,7 @@
         "name": "RELAXED FIT SHORT SLEEVE T-SHIRT",
         "description": "Jeans and a tee… name a more iconic duo, we’ll wait. With soft jersey and a streetwear-inspired relaxed fit, it'll go with every jean in your line-up.",
         "supplier": "Aysha Siddika",
+        "sold": 9,
         "quantity": 25
     },
     {
@@ -93,6 +104,7 @@
         "name": "LEVI'S® LOGO LONG SLEEVE T-SHIRT",
         "description": "Supersoft jersey. A looks-good-with-everything silhouette. One of the most iconic logos in the game. What's not to love?",
         "supplier": "Ashik Hasan",
+        "sold": 6,
         "quantity": 25
     },
     {
@@ -101,6 +113,7 @@
         "name": "TAPER FIT MEN'S PANTS",
         "description": "Introducing the new Levi’s® XX Chino EZ. With a full elastic waist and relaxed, tapered leg, they're easy, versatile and as comfortable as you can get while still looking presentable enough for work",
         "supplier": "Dines Die",
+        "sold": 64,
         "quantity": 25
     },
     {
@@ -109,6 +122,7 @@
         "name": "EDIE PACKABLE JACKET",
         "description": "Our packable jackets are comfort and convenience all rolled into one. This standout has just the right amount of puffiness to keep you from looking like a marshmallow, while ensuring you stay toasty all the same.",
         "supplier": "Mubin Shek",
+        "sold": 55,
         "quantity": 25
     },
     {
@@ -117,6 +131,7 @@
         "name": "WOMEN'S JEANS",
         "description": "Features Levi's® Sculpt with Hypersoft: super-soft for enhanced comfort with supportive stretch",
         "supplier": "Arif Hasan",
+        "sold": 51,
         "quantity": 25
     },
     {
@@ -125,6 +140,7 @@
         "name": "505™ REGULAR FIT STRETCH MEN'S JEANS",
         "description": "Also available in Men's Big & Tall sizes. Shop our 505™ Regular Fit Jeans in Big & Tall",
         "supplier": "Shamol Patary",
+        "sold": 8,
         "quantity": 25
     },
     {
@@ -133,6 +149,7 @@
         "name": "501® SKINNY WOMEN'S JEANS",
         "description": "Close your eyes. Think “jeans.” Now open. They were 501s®, right? They’re literally the blueprint for every pair of jeans in existence",
         "supplier": "Hasib Hasan",
+        "sold": 32,
         "quantity": 25
     },
     {
@@ -141,6 +158,7 @@
         "name": "JEANS SHORT",
         "description": "These look like skinny jeans without feeling like them. And the best part? The ultra-streamlined fit was designed to highlight your shoes.",
         "supplier": "Ayon Juddar",
+        "sold": 45,
         "quantity": 25
     },
     {
@@ -149,6 +167,7 @@
         "name": "LITTLE GIRLS T-SHIRT",
         "description": "The timeless crewneck T-shirt, crafted from ultra-soft jersey and perfected with a boxy, cropped fit.",
         "supplier": "Junayed Hasan",
+        "sold": 62,
         "quantity": 25
     },
     {
@@ -157,6 +176,7 @@
         "name": "SUNSET CAMP SHIRT",
         "description": "No summer line-up's complete without a camp shirt (or three). It breathes the relaxed vibe that summer's all about, but is slightly more stepped-up than a T-shirt.",
         "supplier": "Monir Hasan",
+        "sold": 41,
         "quantity": 25
     }
 ]

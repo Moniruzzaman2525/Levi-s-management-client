@@ -13,7 +13,7 @@ const Headers = () => {
     };
     return (
         <div>
-            <nav className="bg-gray-800">
+            <nav className="bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex md:flex-col md:jus justify-between">
                         <div className="flex items-center h-16 justify-between">
@@ -54,20 +54,21 @@ const Headers = () => {
                                         Calendar
                                     </a> */}
                                     {
-                                        user ? <h4 className='text-white'>{user.displayName}</h4> : "USER"
+                                        user ? <h4 style={{ color: '#64B9B4' }} className='text-white ml-5'>{user.displayName}</h4> : ""
                                     }
                                     {
-                                        user && <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">MyItems</button>
+                                        user && <button style={{ color: '#64B9B4' }} type="button">MyItems</button>
 
                                     }
 
                                     {
-                                        user ? <button className='text-white' onClick={logout}>SignOut</button> :
+                                        user ? <button style={{ color: '#64B9B4' }} className='' onClick={logout}>SIGN OUT</button> :
                                             <Link
+                                                style={{ color: '#64B9B4' }}
                                                 to="/signin"
-                                                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                                className="font-bold text-xl"
                                             >
-                                                Signin
+                                                SIGN IN
                                             </Link>
                                     }
                                 </div>
@@ -80,12 +81,13 @@ const Headers = () => {
                         </div>
                         <div className="-mr-2 flex md:hidden">
                             {
-                                user ? <button className='mr-5 text-white' onClick={logout}>SignOut</button> :
+                                user ? <button style={{ color: '#64B9B4' }} className='mr-5' onClick={logout}>SIGN OUT</button> :
                                     <Link
                                         to="/signin"
-                                        className="mr-5 relative top-5 text-gray-300 hover:text-white px-3 rounded-md text-sm font-medium"
+                                        style={{ color: '#64B9B4' }}
+                                        className="mr-5 relative top-5 hover:text-white px-3 rounded-md text-sm font-medium"
                                     >
-                                        Signin
+                                        SIGN IN
                                     </Link>
                             }
                             <button

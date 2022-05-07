@@ -1,9 +1,11 @@
-import { async } from '@firebase/util';
 import React, { useEffect, useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
+import { IoLogoGoogleplus } from 'react-icons/io';
+import { FiGithub } from 'react-icons/fi';
+import { FiFacebook } from 'react-icons/fi';
 
 const Signup = () => {
     const [userInfo, setUserInfo] = useState({
@@ -61,8 +63,8 @@ const Signup = () => {
         const displayName = event.target.name.value;
         // console.log(displayName);
         // console.log(email, password);
-        await createUserWithEmailAndPassword(userInfo.email, userInfo.password)
-        await updateProfile({ displayName })
+        await createUserWithEmailAndPassword(userInfo.email, userInfo.password);
+        await updateProfile({ displayName });
     }
     // console.log(user);
     useEffect(() => {
@@ -92,37 +94,49 @@ const Signup = () => {
         }
     }, [user])
     return (
-        <div className='w-2/4 mx-auto'>
-            <form onSubmit={handleSignUp}>
-                <div className="mb-6">
-                    <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label>
-                    <input type="text" name='name' id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+        <div className='md:grid mb-20 grid-cols-2'>
+            <div className='font-custom'>
+                <h2 style={{ color: '#64B9B4' }} className='text-center text-3xl py-10'>Create Account</h2>
+                <div className='flex mb-5 justify-center'>
+                    <button className='rounded-full p-5 mr-10 bg-white'><FiFacebook className='text-xl'></FiFacebook></button>
+                    <button className='rounded-full p-5 mr-10 bg-white'><IoLogoGoogleplus className='text-xl'></IoLogoGoogleplus></button>
+                    <button className='rounded-full p-5 mr-10 bg-white'><FiGithub className='text-xl'></FiGithub></button>
                 </div>
-                <div className="mb-6">
-                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                    <input type="email" onChange={handleEmailChange} id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                    {errors?.email && <p className='text-red-600 mt-2 font-bold'>{errors.email}</p>}
+                <p style={{ color: '#494949' }} className='text-xl text-center'>or use your email for registration</p>
+                <div className='w-3/6 mx-auto py-20'>
+                    <form onSubmit={handleSignUp}>
+                        <div className="mb-6">
+                            {/* <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label> */}
+                            <input type="text" name='name' id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Your Name' required />
+                        </div>
+                        <div className="mb-6">
+                            {/* <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label> */}
+                            <input type="email" onChange={handleEmailChange} id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Your Email' required />
+                            {errors?.email && <p className='text-red-600 mt-2 font-bold'>{errors.email}</p>}
+                        </div>
+                        <div className="mb-6">
+                            {/* <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label> */}
+                            <input type="password" onChange={handlePassChange} name='password' id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Password' required />
+                            {errors?.password && <p className='text-red-600 mt-2 font-bold'>{errors.password}</p>}
+                        </div>
+                        <div className="mb-6">
+                            {/* <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label> */}
+                            <input type="password" onChange={handleConfirmPassChange} name='confirmPassword' id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Confirm-Password' required />
+                        </div>
+                        <button type="submit" className="text-white rounded px-5 py-4 text-xl font-bold sign-btn">SIGN UP</button>
+                    </form>
                 </div>
-                <div className="mb-6">
-                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
-                    <input type="password" onChange={handlePassChange} name='password' id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                    {errors?.password && <p className='text-red-600 mt-2 font-bold'>{errors.password}</p>}
+            </div>
+            <div className="login-img relative font-custom">
+                <div className='absolute bottom-0 left-0 right-0 top-[40%] '>
+                    <h1 className='text-center text-white z-50 text-4xl mr-10 mb-10 font-bold'>Welcome Back!</h1>
+                    <h5 className='text-center text-white font-semibold z-50 text-xl mr-5'>To keep connected with us please <br /> login with your personal info</h5>
+                    <p className='text-center  z-50 m-10 text-2xl'><Link className='border-login text-white font-bold py-2 px-5' to="/signin">SIGNIN</Link></p>
                 </div>
-                <div className="mb-6">
-                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
-                    <input type="password" onChange={handleConfirmPassChange} name='confirmPassword' id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                </div>
-                {/* <div className="flex items-start mb-6">
-                    <div className="flex items-center h-5">
-                        <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
-                    </div>
-                    <label for="remember" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                </div> */}
-                <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-            </form>
-            <p>Don't have an account? <Link to="/signin">SignIn</Link></p>
+            </div>
         </div>
     );
 };
 
 export default Signup;
+

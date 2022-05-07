@@ -33,8 +33,7 @@ const Update = () => {
                     console.log(data);
                     setIsReload(!isReload);
                     e.target.reset();
-                    toast.success("Stock add Successful")
-                    e.target.reset()
+                    toast.success("Stock add Successful");
                 });
         }
     };
@@ -65,10 +64,11 @@ const Update = () => {
             <div>
                 <p>Id: {user._id}</p>
                 <h1>{user.name}</h1>
-                <p>{user.price}</p>
+                <p>${user.price}</p>
                 <p><small>{user.description}</small></p>
-                <p>{user.supplier}</p>
-                <p>quantity{user.quantity}</p>
+                <p>Supplier Name: {user.supplier}</p>
+                <p>Sold: {user.sold}</p>
+                <p>Quantity: {user.quantity}</p>
                 <button onClick={() => handleDeliveryProduct(user._id)}>Delivered</button>
                 <form onSubmit={handleUpdateQuantity}>
                     <input type="text" name='quantity' />
