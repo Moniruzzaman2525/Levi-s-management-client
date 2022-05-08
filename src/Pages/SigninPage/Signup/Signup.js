@@ -72,13 +72,13 @@ const Signup = () => {
         if (error) {
             switch (error?.code) {
                 case "auth/invalid-email":
-                    toast.error('Invalid Email');
+                    toast.error('Invalid Email!');
                     break;
                 case "auth/user-exists":
-                    toast.error("Please Register")
+                    toast.error("Please Register!")
                     break;
                 case "auth/invalid-password":
-                    toast.error("Wrong Password");
+                    toast.error("Wrong Password!");
                     break;
                 case "something went wrong":
                 default:

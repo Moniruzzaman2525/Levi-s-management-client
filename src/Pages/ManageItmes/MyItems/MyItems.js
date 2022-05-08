@@ -52,7 +52,7 @@ const MyItems = () => {
 
 
     return (
-        <div className='mt-10'>
+        <div className='mt-10 '>
             <h1 className='text-2xl text-center'>My Items: {addItems.length}</h1>
             <h1 className='text-2xl text-center'>User Name: {user.displayName}</h1>
             <h1 className='text-2xl text-center'>User Email: {user.email}</h1>

@@ -80,12 +80,12 @@ const Signin = () => {
     if (user) {
         toast.success('User Sign In Successfully')
     }
-    let errorMsg;
-    if (error || resetError) {
-        errorMsg =
-            <p className='text-red-700'>Error : {error?.message}
-            </p>;
-    }
+    // let errorMsg;
+    // if (error || resetError) {
+    //     errorMsg =
+    //         <p className='text-red-700'>Error : {error?.message}
+    //         </p>;
+    // }
     useEffect(() => {
         if (error) {
             switch (error?.code) {
@@ -124,7 +124,7 @@ const Signin = () => {
                             <input type="password" onChange={handlePassChange} id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-400  focus:border-teal-400  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-400  dark:focus:border-teal-400 " placeholder='Password' required />
                             {errors?.password && <p className='text-red-600 font-bold mt-2'>{errors.password}</p>}
                         </div>
-                        {errorMsg}
+                        {/* {errorMsg} */}
                         <button type="submit" className="text-white rounded px-5 py-4 text-xl font-bold sign-btn">SIGN IN</button>
                     </form>
                     <p className='mt-5'>Forget Password?? <button style={{ color: '#64B9B4' }} type="button" className="ml-2 text-base btn btn-link text-decoration-none" onClick={resetPassword}>Rest Password</button></p>

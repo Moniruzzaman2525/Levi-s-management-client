@@ -12,13 +12,13 @@ const SocialLogin = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
     const [token] = useToken(googleUser || githubUser);
-    const googleSignIn = async () => {
-        await signInWithGoogle();
+    const googleSignIn = () => {
+        signInWithGoogle();
         if (googleError) {
             toast.error('User Cancel POP UP!!!')
         };
         if (googleUser) {
-            toast.success('Sign In Successfully', { 'id': 'success' })
+            toast.success('Sign In Successfully')
         }
     };
     const githubSingIn = () => {
@@ -27,11 +27,9 @@ const SocialLogin = () => {
             toast.error('User Cancel POP UP!!!')
         };
         if (githubUser) {
-            toast.success('Sign In Successfully', { 'id': 'success' })
+            toast.success('Sign In Successfully!!!')
         }
     };
-
-
 
     if (googleLoading || githubLoading) {
         <Loading></Loading>
