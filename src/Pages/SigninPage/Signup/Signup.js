@@ -72,13 +72,13 @@ const Signup = () => {
         if (error) {
             switch (error?.code) {
                 case "auth/invalid-email":
-                    toast.error('Invalid Email');
+                    toast.error('Invalid Email', { 'id': 'error' });
                     break;
                 case "auth/user-exists":
-                    toast.error("Please Register")
+                    toast.error("Please Register", { 'id': 'error' })
                     break;
                 case "auth/invalid-password":
-                    toast.error("Wrong Password");
+                    toast.error("Wrong Password", { 'id': 'error' });
                     break;
                 case "something went wrong":
                 default:
@@ -87,13 +87,13 @@ const Signup = () => {
         }
     }, [error]);
     if (user) {
-        toast.success('User Sign Up Successfully')
+        toast.success('User Sign Up Successfully', { 'id': 'success' })
     }
     if (loading || updating) {
         <Loading></Loading>
     };
     if (error || updateError) {
-        toast.error('Something Went Wrong!!!')
+        toast.error('Something Went Wrong!!!', { 'id': 'error' })
     }
     const navigate = useNavigate()
     const location = useLocation()
@@ -111,21 +111,21 @@ const Signup = () => {
                     <form onSubmit={handleSignUp}>
                         <div className="mb-6">
                             {/* <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label> */}
-                            <input type="text" name='name' id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Your Name' required />
+                            <input type="text" name='name' id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-400  focus:border-teal-400  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-400  dark:focus:border-teal-400 " placeholder='Your Name' required />
                         </div>
                         <div className="mb-6">
                             {/* <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label> */}
-                            <input type="email" onChange={handleEmailChange} id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Your Email' required />
+                            <input type="email" onChange={handleEmailChange} id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-400  focus:border-teal-400  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-400  dark:focus:border-teal-400 " placeholder='Your Email' required />
                             {errors?.email && <p className='text-red-600 mt-2 font-bold'>{errors.email}</p>}
                         </div>
                         <div className="mb-6">
                             {/* <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label> */}
-                            <input type="password" onChange={handlePassChange} name='password' id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Password' required />
+                            <input type="password" onChange={handlePassChange} name='password' id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-400  focus:border-teal-400  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-400  dark:focus:border-teal-400 " placeholder='Password' required />
                             {errors?.password && <p className='text-red-600 mt-2 font-bold'>{errors.password}</p>}
                         </div>
                         <div className="mb-6">
                             {/* <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label> */}
-                            <input type="password" onChange={handleConfirmPassChange} name='confirmPassword' id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Confirm-Password' required />
+                            <input type="password" onChange={handleConfirmPassChange} name='confirmPassword' id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-400  focus:border-teal-400  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-400  dark:focus:border-teal-400 " placeholder='Confirm-Password' required />
                         </div>
                         <button type="submit" className="text-white rounded px-5 py-4 text-xl font-bold sign-btn">SIGN UP</button>
                     </form>

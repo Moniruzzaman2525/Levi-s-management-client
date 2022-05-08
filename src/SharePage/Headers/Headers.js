@@ -4,6 +4,7 @@ import { Transition } from "@headlessui/react";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
+import CustomLink from '../../CustomLink/CustomLink';
 
 const Headers = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,32 +28,33 @@ const Headers = () => {
                             </div>
                             <div className="hidden md:block">
                                 <div className="ml-5 flex items-baseline ">
+                                    <CustomLink to={'/'}><button className='header-style px-3 text-sm font-bold' type="button">HOME</button></CustomLink>
+                                    <CustomLink to={'/blogs'}><button className='header-style px-3 text-sm font-bold' type="button">BLOGS</button></CustomLink>
 
                                     {
-                                        user && <Link to={'/manage'}><button className='hover:text-white px-3 rounded-md text-lg font-bold' style={{ color: '#64B9B4' }} type="button">MANAGE ITEMS</button></Link>
-
-                                    }
-                                    {
-                                        user && <Link to={'/add'}><button className='hover:text-white px-3 rounded-md text-lg font-bold' style={{ color: '#64B9B4' }} type="button">ADD ITEMS</button></Link>
+                                        user && <CustomLink to={'/manage'}><button className='header-style px-3  text-sm font-bold' type="button">MANAGE ITEMS</button></CustomLink>
 
                                     }
                                     {
-                                        user && <Link to={'/myitems'}><button className='hover:text-white px-3 rounded-md text-lg font-bold' style={{ color: '#64B9B4' }} type="button">MY ITEMS</button></Link>
+                                        user && <CustomLink to={'/add'}><button className='header-style px-3 rounded  text-sm font-bold' type="button">ADD ITEMS</button></CustomLink>
 
                                     }
                                     {
-                                        user ? <h4 style={{ color: '#64B9B4' }} className='text-white hover:text-white px-3 rounded-md text-lg font-bold ml-5'>{user.displayName}</h4> : ""
+                                        user && <CustomLink to={'/myitems'}><button className='header-style px-3 rounded  text-sm font-bold' type="button">MY ITEMS</button></CustomLink>
+
+                                    }
+                                    {
+                                        user ? <h4 style={{ color: '#64B9B4' }} className='text-white px-3 rounded text-sm font-bold ml-5'>{user.displayName}</h4> : ""
                                     }
 
                                     {
-                                        user ? <button style={{ color: '#64B9B4' }} className='hover:text-white px-3 rounded-md text-lg font-bold' onClick={logout}>SIGN OUT</button> :
-                                            <Link
-                                                style={{ color: '#64B9B4' }}
+                                        user ? <button className='header-style px-3 rounded text-sm  font-bold' onClick={logout}>SIGN OUT</button> :
+                                            <CustomLink
                                                 to="/signin"
-                                                className="font-bold text-lg"
+                                                className="font-bold header-style  text-sm"
                                             >
                                                 SIGN IN
-                                            </Link>
+                                            </CustomLink>
                                     }
                                 </div>
                             </div>
@@ -64,14 +66,14 @@ const Headers = () => {
                         </div>
                         <div className="-mr-2 flex md:hidden">
                             {
-                                user ? <button style={{ color: '#64B9B4' }} className='mr-5 hover:text-white px-3 rounded-md text-lg font-bold' onClick={logout}>SIGN OUT</button> :
-                                    <Link
+                                user ? <button style={{ color: '#64B9B4' }} className='mr-5 hover:text-white px-3 rounded-md text-sm font-bold' onClick={logout}>SIGN OUT</button> :
+                                    <CustomLink
                                         to="/signin"
                                         style={{ color: '#64B9B4' }}
-                                        className="mr-5 relative top-5 hover:text-white px-3 rounded-md text-lg font-bold"
+                                        className="mr-5 relative top-5 hover:text-white px-3 rounded-md text-sm font-bold"
                                     >
                                         SIGN IN
-                                    </Link>
+                                    </CustomLink>
                             }
                             <button
 
@@ -136,16 +138,18 @@ const Headers = () => {
                             <div className="md:hidden" id="mobile-menu">
 
                                 <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                                    <Link to={'/'}><button className='border-header block px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">HOME</button></Link>
+                                    <Link to={'/blogs'}><button className='border-header block px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">BLOGS</button></Link>
                                     {
-                                        user && <Link to={'/manage'}><button className='border-header block hover:text-white px-3 text-lg font-bold' style={{ color: '#64B9B4' }} type="button">MANAGE ITEMS</button></Link>
+                                        user && <Link to={'/manage'}><button className='border-header block hover:text-white px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">MANAGE ITEMS</button></Link>
 
                                     }
                                     {
-                                        user && <Link to={'/myitems'}><button className='border-header block hover:text-white px-3 text-lg font-bold' style={{ color: '#64B9B4' }} type="button">ADD ITEMS</button></Link>
+                                        user && <Link to={'/myitems'}><button className='border-header block hover:text-white px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">ADD ITEMS</button></Link>
 
                                     }
                                     {
-                                        user && <Link to={'/myitems'}><button className='border-header block hover:text-white px-3 text-lg font-bold' style={{ color: '#64B9B4' }} type="button">MY ITEMS</button></Link>
+                                        user && <Link to={'/myitems'}><button className='border-header block hover:text-white px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">MY ITEMS</button></Link>
 
                                     }
 

@@ -30,15 +30,39 @@ const MyItems = () => {
         }
         getItems();
     }, [user]);
-    console.log(addItems);
+
+
+
+    const handleUserDelate = id => {
+        console.log('object', id);
+        const proceed = window.confirm("Are You Sure Want To Delate!!")
+        if (proceed) {
+
+            const url = `https://hidden-crag-72651.herokuapp.com/delete/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => console.log('hello', data))
+            const updateService = addItems.filter(service => service._id !== id);
+            setAddItems(updateService);
+            toast.success('Items Delate Successful')
+        }
+    }
+
+
     return (
         <div className='mt-10'>
-            <h1 className='text-2xl text-center'>Items: {addItems.length}</h1>
+            <h1 className='text-2xl text-center'>My Items: {addItems.length}</h1>
             <h1 className='text-2xl text-center'>User Name: {user.displayName}</h1>
             <h1 className='text-2xl text-center'>User Email: {user.email}</h1>
             <div className='md:grid grid-cols-2 mt-10'>
                 {
-                    addItems.map(item => <Items item={item} key={item._id}></Items>)
+                    addItems.map(item => <Items
+                        item={item}
+                        key={item._id}
+                        handleUserDelate={handleUserDelate}
+                    ></Items>)
                 }
             </div>
         </div>

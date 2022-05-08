@@ -19,10 +19,10 @@ const SocialLogin = () => {
         signInWithGithub();
     };
     if (googleError || githubError) {
-        toast.error('User Cancel POP UP!!!')
+        toast.error('User Cancel POP UP!!!', { 'id': 'error' })
     }
     if (googleUser || githubUser) {
-        toast.success('Sign In Successfully')
+        toast.success('Sign In Successfully', { 'id': 'success' })
     }
 
     if (googleLoading || githubLoading) {

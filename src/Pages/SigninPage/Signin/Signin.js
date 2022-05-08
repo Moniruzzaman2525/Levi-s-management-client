@@ -47,10 +47,10 @@ const Signin = () => {
         const email = userInfo.email;
         if (email) {
             await sendPasswordResetEmail(email);
-            toast.success('Send email!!!');
+            toast.success('Send email!!!', { 'id': 'email' });
         }
         else {
-            toast.error('Please enter your email address!!!')
+            toast.error('Please enter your email address!!!', { 'id': 'error' })
         }
     }
 
@@ -78,7 +78,7 @@ const Signin = () => {
         navigate(from, { replace: true });
     }
     if (user) {
-        toast.success('User Sign In Successfully')
+        toast.success('User Sign In Successfully', { 'id': 'error' })
     }
     let errorMsg;
     if (error || resetError) {
@@ -90,13 +90,13 @@ const Signin = () => {
         if (error) {
             switch (error?.code) {
                 case "auth/invalid-email":
-                    toast.error('Invalid Email');
+                    toast.error('Invalid Email', { 'id': 'error' });
                     break;
                 case "auth/user-not-found":
-                    toast.error("Please Register")
+                    toast.error("Please Register", { 'id': 'error' })
                     break;
                 case "auth/wrong-password":
-                    toast.error("Wrong Password");
+                    toast.error("Wrong Password", { 'id': 'error' });
                     break;
                 case "something went wrong":
                 default:
@@ -116,18 +116,18 @@ const Signin = () => {
                     <form onSubmit={handleSignIn}>
                         <div className="mb-6">
                             {/* <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label> */}
-                            <input type="email" onChange={handleEmailChange} id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Your Email' required />
+                            <input type="email" onChange={handleEmailChange} id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-400  focus:border-teal-400  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-400  dark:focus:border-teal-400 " placeholder='Your Email' required />
                             {errors?.email && <p className='text-red-600 font-bold mt-2'>{errors.email}</p>}
                         </div>
                         <div className="mb-6">
                             {/* <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label> */}
-                            <input type="password" onChange={handlePassChange} id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Password' required />
+                            <input type="password" onChange={handlePassChange} id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-400  focus:border-teal-400  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-400  dark:focus:border-teal-400 " placeholder='Password' required />
                             {errors?.password && <p className='text-red-600 font-bold mt-2'>{errors.password}</p>}
                         </div>
                         {errorMsg}
                         <button type="submit" className="text-white rounded px-5 py-4 text-xl font-bold sign-btn">SIGN IN</button>
                     </form>
-                    <p>Forget Password <button type="button" class="btn btn-link text-decoration-none" onClick={resetPassword}>Rest Password</button></p>
+                    <p className='mt-5'>Forget Password?? <button style={{ color: '#64B9B4' }} type="button" className="ml-2 text-base btn btn-link text-decoration-none" onClick={resetPassword}>Rest Password</button></p>
                 </div>
             </div>
             <div className="login-img relative font-custom">

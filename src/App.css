@@ -210,8 +210,33 @@ body {
   border-bottom: 2px solid #64B9B4;
 }
 
+/* header style */
+.header-style {
+  color: #64B9B4;
+}
+
+.header-style:hover {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #64B9B4;
+  color: white;
+}
+
+
 /* google font */
 
 .font-custom {
   font-family: 'Poppins', sans-serif;
+}
+
+/* custom css */
+.btn-info {
+  background-color: #64B9B4;
+}
+
+.btn-info:hover {
+  border-radius: 0;
+  color: #64B9B4;
+  background-color: whitesmoke;
+  border-bottom: 2px solid #64B9B4;
 }
