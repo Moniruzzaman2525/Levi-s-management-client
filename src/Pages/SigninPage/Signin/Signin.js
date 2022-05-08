@@ -47,10 +47,10 @@ const Signin = () => {
         const email = userInfo.email;
         if (email) {
             await sendPasswordResetEmail(email);
-            toast.success('Send email!!!', { 'id': 'email' });
+            toast.success('Send email!!!');
         }
         else {
-            toast.error('Please enter your email address!!!', { 'id': 'error' })
+            toast.error('Please enter your email address!!!')
         }
     }
 
@@ -78,7 +78,7 @@ const Signin = () => {
         navigate(from, { replace: true });
     }
     if (user) {
-        toast.success('User Sign In Successfully', { 'id': 'error' })
+        toast.success('User Sign In Successfully')
     }
     let errorMsg;
     if (error || resetError) {
@@ -90,13 +90,13 @@ const Signin = () => {
         if (error) {
             switch (error?.code) {
                 case "auth/invalid-email":
-                    toast.error('Invalid Email', { 'id': 'error' });
+                    toast.error('Invalid Email');
                     break;
                 case "auth/user-not-found":
-                    toast.error("Please Register", { 'id': 'error' })
+                    toast.error("Please Register")
                     break;
                 case "auth/wrong-password":
-                    toast.error("Wrong Password", { 'id': 'error' });
+                    toast.error("Wrong Password");
                     break;
                 case "something went wrong":
                 default:
@@ -108,7 +108,7 @@ const Signin = () => {
     return (
         <div className='md:grid mb-20  grid-cols-2'>
             <div className='font-custom'>
-                <h2 style={{ color: '#64B9B4' }} className='text-center text-3xl py-10'>Sign in to....</h2>
+                <h2 style={{ color: '#64B9B4' }} className='text-center text-3xl py-10'>Sign in to Levi's®.</h2>
                 {/* <button onClick={() => signInWithGoogle()} className='rounded-full p-5 mr-10 bg-white'><IoLogoGoogleplus className='text-xl'></IoLogoGoogleplus></button> */}
                 <SocialLogin></SocialLogin>
                 <p style={{ color: '#494949' }} className='text-center text-xl'>or use your email account</p>

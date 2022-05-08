@@ -1,6 +1,6 @@
 # Levi's® Warehouse
 
-Levi's® Warehouse [Levi's® Warehouse](https://github.com/facebook/create-react-app)
+Levi's® Warehouse [Levi's® Warehouse]()
 
 Server site link[Server site code link]()
 

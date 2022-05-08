@@ -5,13 +5,22 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
 import CustomLink from '../../CustomLink/CustomLink';
+import { toast } from 'react-toastify';
+import Loading from '../Loading/Loading';
 
 const Headers = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [user, loading, error] = useAuthState(auth);
     const logout = () => {
         signOut(auth);
+        toast.success('Sign Out Successfully')
     };
+    if (error) {
+        toast.error('Something Wrong!')
+    }
+    if (loading) {
+        <Loading></Loading>
+    }
     return (
         <div>
             <nav className="bg-white">
@@ -29,7 +38,6 @@ const Headers = () => {
                             <div className="hidden md:block">
                                 <div className="ml-5 flex items-baseline ">
                                     <CustomLink to={'/'}><button className='header-style px-3 text-sm font-bold' type="button">HOME</button></CustomLink>
-                                    <CustomLink to={'/blogs'}><button className='header-style px-3 text-sm font-bold' type="button">BLOGS</button></CustomLink>
 
                                     {
                                         user && <CustomLink to={'/manage'}><button className='header-style px-3  text-sm font-bold' type="button">MANAGE ITEMS</button></CustomLink>
@@ -43,6 +51,7 @@ const Headers = () => {
                                         user && <CustomLink to={'/myitems'}><button className='header-style px-3 rounded  text-sm font-bold' type="button">MY ITEMS</button></CustomLink>
 
                                     }
+                                    <CustomLink to={'/blogs'}><button className='header-style px-3 text-sm font-bold' type="button">BLOGS</button></CustomLink>
                                     {
                                         user ? <h4 style={{ color: '#64B9B4' }} className='text-white px-3 rounded text-sm font-bold ml-5'>{user.displayName}</h4> : ""
                                     }
@@ -139,13 +148,13 @@ const Headers = () => {
 
                                 <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                                     <Link to={'/'}><button className='border-header block px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">HOME</button></Link>
-                                    <Link to={'/blogs'}><button className='border-header block px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">BLOGS</button></Link>
+
                                     {
                                         user && <Link to={'/manage'}><button className='border-header block hover:text-white px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">MANAGE ITEMS</button></Link>
 
                                     }
                                     {
-                                        user && <Link to={'/myitems'}><button className='border-header block hover:text-white px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">ADD ITEMS</button></Link>
+                                        user && <Link to={'/add'}><button className='border-header block hover:text-white px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">ADD ITEMS</button></Link>
 
                                     }
                                     {
@@ -153,7 +162,7 @@ const Headers = () => {
 
                                     }
 
-
+                                    <Link to={'/blogs'}><button className='border-header block px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">BLOGS</button></Link>
                                 </div>
 
                             </div>

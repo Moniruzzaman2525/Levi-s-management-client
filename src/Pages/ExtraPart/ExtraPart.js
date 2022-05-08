@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ExtraPart = () => {
     return (
-        <div className='flex flex-col md:flex-row'>
+        <div className='font-custom-home flex flex-col md:flex-row'>
             <div className='md:order-1 order-2'>
                 <img src="https://s7d2.scene7.com/is/image/lscoecomm/collina%20strada_5050module_?fmt=pjpeg&qlt=70,1&resMode=bisharp&wid=600&fit=crop,0" alt="" />
             </div>

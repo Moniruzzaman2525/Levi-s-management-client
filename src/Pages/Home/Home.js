@@ -10,7 +10,6 @@ import Services from '../Services/Services';
 
 const Home = () => {
     const { services } = useServices();
-    console.log(services);
     return (
         <div>
             {

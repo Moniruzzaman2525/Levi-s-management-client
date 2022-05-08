@@ -9,7 +9,7 @@ const Services = () => {
     const newServices = services.slice(0, 6)
 
     return (
-        <div className='w-full'>
+        <div className='w-full font-custom-home'>
             <h2 className='text-4xl font-bold text-center m-8'>Inven<span style={{ color: '#64B9B4' }}>tories</span></h2>
             <div className='md:grid grid-cols-3 container mx-auto gap-4'>
                 {

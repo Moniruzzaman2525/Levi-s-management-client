@@ -1,6 +1,6 @@
 .body {
   font-family: 'Mochiy Pop P One', sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Poppins', sans-serif;
   font-family: 'Roboto', sans-serif;
   font-family: 'Work Sans', sans-serif;
 }
@@ -227,6 +227,10 @@ body {
 
 .font-custom {
   font-family: 'Poppins', sans-serif;
+}
+
+.font-custom-home {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* custom css */

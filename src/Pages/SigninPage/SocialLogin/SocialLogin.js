@@ -14,16 +14,24 @@ const SocialLogin = () => {
     const [token] = useToken(googleUser || githubUser);
     const googleSignIn = async () => {
         await signInWithGoogle();
+        if (googleError) {
+            toast.error('User Cancel POP UP!!!')
+        };
+        if (googleUser) {
+            toast.success('Sign In Successfully', { 'id': 'success' })
+        }
     };
     const githubSingIn = () => {
         signInWithGithub();
+        if (githubError) {
+            toast.error('User Cancel POP UP!!!')
+        };
+        if (githubUser) {
+            toast.success('Sign In Successfully', { 'id': 'success' })
+        }
     };
-    if (googleError || githubError) {
-        toast.error('User Cancel POP UP!!!', { 'id': 'error' })
-    }
-    if (googleUser || githubUser) {
-        toast.success('Sign In Successfully', { 'id': 'success' })
-    }
+
+
 
     if (googleLoading || githubLoading) {
         <Loading></Loading>

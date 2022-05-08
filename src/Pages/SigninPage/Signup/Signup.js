@@ -72,13 +72,13 @@ const Signup = () => {
         if (error) {
             switch (error?.code) {
                 case "auth/invalid-email":
-                    toast.error('Invalid Email', { 'id': 'error' });
+                    toast.error('Invalid Email');
                     break;
                 case "auth/user-exists":
-                    toast.error("Please Register", { 'id': 'error' })
+                    toast.error("Please Register")
                     break;
                 case "auth/invalid-password":
-                    toast.error("Wrong Password", { 'id': 'error' });
+                    toast.error("Wrong Password");
                     break;
                 case "something went wrong":
                 default:
@@ -87,13 +87,13 @@ const Signup = () => {
         }
     }, [error]);
     if (user) {
-        toast.success('User Sign Up Successfully', { 'id': 'success' })
+        toast.success('User Sign Up Successfully')
     }
     if (loading || updating) {
         <Loading></Loading>
     };
     if (error || updateError) {
-        toast.error('Something Went Wrong!!!', { 'id': 'error' })
+        toast.error('Something Went Wrong!!!')
     }
     const navigate = useNavigate()
     const location = useLocation()
