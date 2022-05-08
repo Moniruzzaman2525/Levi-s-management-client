@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const OurTeam = () => {
     return (
-        <div className='relative'>
+        <div className='relative mb-20'>
             <div className='team-img mx-auto md:mb-72 relative'>
                 <h1 className='font-extrabold text-2xl text-white z-50 md:text-5xl text-center absolute right-0 left-0 bottom-0 top-[20%]'>We love what we do <br /> and we do it with passion</h1>
                 <Link to={'/manage'}>

@@ -1,6 +1,11 @@
 # Levi's® Warehouse
 
-Levi's® Warehouse [Levi's® Warehouse](https://github.com/facebook/create-react-app).
+Levi's® Warehouse [Levi's® Warehouse](https://github.com/facebook/create-react-app)
+
+Server site link[Server site code link]()
+
+## Short Description:
+
 
 ## Project Details:
 * There is a home page. Home page has header, banner, services, footer
@@ -8,9 +13,6 @@ Levi's® Warehouse [Levi's® Warehouse](https://github.com/facebook/create-react
 * There are some services on the home page where service all details are shown.There is a section on the home page which gives all the brands.There is a footer.
 * The service and quantity can be updated on the update page. There is an ad item page where new products can be added.There is a page called My Item which will show the items that a user is adding.
 * There is a sign in and sign up page for users to sign in and sign up.A blog page where some questions are answered
-
-
-Server site link[Server site code link]()
 
 
 Website Dependencies:
