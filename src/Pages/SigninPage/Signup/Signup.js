@@ -66,6 +66,7 @@ const Signup = () => {
         await createUserWithEmailAndPassword(userInfo.email, userInfo.password);
         await updateProfile({ displayName });
         event.target.reset();
+        toast.success('User Sign Up Successfully')
     };
 
     useEffect(() => {
@@ -86,9 +87,9 @@ const Signup = () => {
             }
         }
     }, [error]);
-    if (user) {
-        toast.success('User Sign Up Successfully')
-    }
+    // if (user) {
+    //     toast.success('User Sign Up Successfully')
+    // }
     if (loading || updating) {
         <Loading></Loading>
     };
@@ -98,7 +99,7 @@ const Signup = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
-    if (token) {
+    if (user) {
         navigate(from, { replace: true });
     }
     return (

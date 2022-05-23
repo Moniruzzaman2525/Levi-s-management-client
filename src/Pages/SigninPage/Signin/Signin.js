@@ -74,12 +74,10 @@ const Signin = () => {
         await signInWithEmailAndPassword(userInfo.email, userInfo.password);
         event.target.reset();
     }
-    if (token) {
+    if (user) {
         navigate(from, { replace: true });
     }
-    if (user) {
-        toast.success('User Sign In Successfully')
-    }
+
     // let errorMsg;
     // if (error || resetError) {
     //     errorMsg =

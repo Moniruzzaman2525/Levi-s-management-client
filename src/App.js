@@ -14,6 +14,7 @@ import MyItems from './Pages/ManageItmes/MyItems/MyItems';
 import Footer from './SharePage/Footer/Footer';
 import NotFound from './SharePage/NotFound/NotFound';
 import Blogs from './Pages/Blogs/Blogs';
+import Contact from './Pages/Contact';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path='/myitems' element={<RequireAuth><MyItems></MyItems></RequireAuth>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

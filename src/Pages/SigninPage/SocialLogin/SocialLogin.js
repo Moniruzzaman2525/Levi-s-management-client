@@ -18,7 +18,7 @@ const SocialLogin = () => {
             toast.error('User Cancel POP UP!!!')
         };
         if (googleUser) {
-            toast.success('Sign In Successfully')
+            toast.success('Sign hoisa')
         }
     };
     const githubSingIn = () => {
@@ -38,7 +38,7 @@ const SocialLogin = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
-    if (token) {
+    if (googleUser || githubLoading) {
         navigate(from, { replace: true });
     }
     return (

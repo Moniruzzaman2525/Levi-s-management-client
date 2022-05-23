@@ -52,6 +52,7 @@ const Headers = () => {
 
                                     }
                                     <CustomLink to={'/blogs'}><button className='header-style px-3 text-sm font-bold' type="button">BLOGS</button></CustomLink>
+                                    <CustomLink to={'/contact'}><button className='header-style px-3 text-sm font-bold' type="button">CONTACT</button></CustomLink>
                                     {
                                         user ? <h4 style={{ color: '#64B9B4' }} className='text-white px-3 rounded text-sm font-bold ml-5'>{user.displayName}</h4> : ""
                                     }
@@ -163,6 +164,7 @@ const Headers = () => {
                                     }
 
                                     <Link to={'/blogs'}><button className='border-header block px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">BLOGS</button></Link>
+                                    <Link to={'/contact'}><button className='border-header block px-3 text-sm font-bold' style={{ color: '#64B9B4' }} type="button">CONTACT</button></Link>
                                 </div>
 
                             </div>

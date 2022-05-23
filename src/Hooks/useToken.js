@@ -6,7 +6,7 @@ const useToken = user => {
         const getToken = async () => {
             const email = user?.user?.email;
             if (email) {
-                const { data } = await axios.post('https://hidden-crag-72651.herokuapp.com/login', { email });
+                const { data } = await axios.post('https://sleepy-citadel-83036.herokuapp.com//login', { email });
                 setToken(data.accessToken);
                 localStorage.setItem('accessToken', data.accessToken)
             }

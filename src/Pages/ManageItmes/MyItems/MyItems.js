@@ -15,7 +15,7 @@ const MyItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user.email;
-            const url = `https://hidden-crag-72651.herokuapp.com/add?email=${email}`
+            const url = `https://sleepy-citadel-83036.herokuapp.com//add?email=${email}`
             try {
                 const { data } = await axiosPrivate.get(url);
                 setAddItems(data);
@@ -38,7 +38,7 @@ const MyItems = () => {
         const proceed = window.confirm("Are You Sure Want To Delate!!")
         if (proceed) {
 
-            const url = `https://hidden-crag-72651.herokuapp.com/delete/${id}`
+            const url = `https://sleepy-citadel-83036.herokuapp.com//delete/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

@@ -7,7 +7,7 @@ const Update = () => {
     console.log(user);
     const [isReload, setIsReload] = useState(false);
     useEffect(() => {
-        fetch(`https://hidden-crag-72651.herokuapp.com/service/${id}`)
+        fetch(`https://sleepy-citadel-83036.herokuapp.com//service/${id}`)
             .then(res => res.json())
             .then(data => setUser(data))
     }, [isReload]);
@@ -18,7 +18,7 @@ const Update = () => {
         const newQuantity = parseInt(quantity) + parseInt(user?.quantity)
         const updateQuantity = { newQuantity: newQuantity }
 
-        const url = `https://hidden-crag-72651.herokuapp.com/service/${id}`
+        const url = `https://sleepy-citadel-83036.herokuapp.com//service/${id}`
         if (!quantity) {
             toast.error('Please add some quantity')
         } else {
@@ -41,7 +41,7 @@ const Update = () => {
     const handleDeliveryProduct = (id) => {
         const quantity = user?.quantity;
         const updateQuantity = { quantity };
-        const url = `https://hidden-crag-72651.herokuapp.com/delivery/${id}`
+        const url = `https://sleepy-citadel-83036.herokuapp.com//delivery/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {

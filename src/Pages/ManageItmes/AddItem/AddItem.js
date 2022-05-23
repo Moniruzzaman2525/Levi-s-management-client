@@ -16,7 +16,7 @@ const AddItem = () => {
             description: e.target.description.value,
             img: e.target.img.value
         }
-        axios.post("https://hidden-crag-72651.herokuapp.com/add", items)
+        axios.post("https://sleepy-citadel-83036.herokuapp.com//add", items)
             .then(response => {
                 console.log(response);
                 e.target.reset();
